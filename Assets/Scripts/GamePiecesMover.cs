@@ -22,7 +22,7 @@ public class GamePiecesMover : MonoBehaviour
 		_dice = FindObjectOfType<Dice>();
 
 		_points = new Point[_path.childCount];
-
+		
 		for (int i = 0; i < _points.Length; i++)
 		{
 			_points[i] = _path.GetChild(i).GetComponent<Point>();
