@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DiceSide : MonoBehaviour
 {
 	public int SideValue { get => _sideValue; }
-	public bool IsGrounded { get => _isGrounded; /*set => _isGrounded = value;*/ }
+	public bool IsGrounded { get => _isGrounded; }
 
 	[SerializeField] private int _sideValue;
 	
