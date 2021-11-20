@@ -52,11 +52,6 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 			return;
 		}
 
-		//foreach (var side in _sides)
-		//{
-		//	side.IsGrounded = false;
-		//}	
-
 		_isActualValue = false;
 
 		_rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
