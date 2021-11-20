@@ -5,10 +5,10 @@ public class GamePiecesMover : MonoBehaviour
 {
 	public bool IsMoving = false;
 
-	[SerializeField] private Transform _path;
 	[SerializeField] private float _speed;
 
-	private Transform[] _points;
+	private Transform _path;
+	private Point[] _points;
 	private Transform _target;
 	private int _indexCurrentPoint;
 	private WaitForSeconds _waitforSecond = new WaitForSeconds(0.1f);
@@ -18,13 +18,19 @@ public class GamePiecesMover : MonoBehaviour
 
 	private void Start()
 	{
+		_path = FindObjectOfType<Path>().transform;
 		_dice = FindObjectOfType<Dice>();
-		_points = new Transform[_path.childCount];
 
-		for (int i = 0; i < _path.childCount; i++)
+		_points = new Point[_path.childCount];
+
+		for (int i = 0; i < _points.Length; i++)
 		{
-			_points[i] = _path.GetChild(i);
+			_points[i] = _path.GetChild(i).GetComponent<Point>();
+			_points[i].GetComponent<Point>().Text.text = (i + 1).ToString();
+			Debug.Log(_points[i]);
 		}
+
+		Debug.Log(_points.Length);
 
 		StartMoving();
 	}
@@ -48,7 +54,7 @@ public class GamePiecesMover : MonoBehaviour
 
 	private void MoveToCurrentPoint()
 	{
-		_target = _points[_indexCurrentPoint];
+		_target = _points[_indexCurrentPoint].transform;
 		transform.position = Vector3.MoveTowards
 		(
 			transform.position,
