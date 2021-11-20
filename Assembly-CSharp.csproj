@@ -56,9 +56,10 @@
     <Compile Include="Assets\Scripts\Dice.cs" />
     <Compile Include="Assets\Scripts\DiceSide.cs" />
     <Compile Include="Assets\Scripts\GamePiecesMover.cs" />
+    <Compile Include="Assets\Scripts\Wall.cs" />
     <Compile Include="Assets\Scripts\Ground.cs" />
     <Compile Include="Assets\Scripts\MovingThroughPoints.cs" />
-    <Compile Include="Assets\Scripts\Wall.cs" />
+    <Compile Include="Assets\Scripts\PointBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
