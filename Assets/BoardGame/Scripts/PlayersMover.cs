@@ -46,7 +46,8 @@ public class PlayersMover : MonoBehaviour
 		_targetPointIndex = _activePlayer.CurrentPoint + 1;
 		_endPointIndex = _activePlayer.CurrentPoint + diceValue;
 
-		while (_targetPointIndex <= _endPointIndex)
+		while (_targetPointIndex <= _endPointIndex
+			&& _targetPointIndex < _points.Length)
 		{
 			MoveToCurrentPoint();
 			yield return SwitchToNextPoint();
