@@ -7,7 +7,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 {
 	[HideInInspector] public EventHandler<DiceEventArgs> RolledEvent;
 
-	private bool _isActualValue = false;
+	private bool _isActualValue = true;
 	private Rigidbody _rigidbody;
 
 	private const float _jumpForce = 10f;
@@ -26,11 +26,29 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 
 		_isActualValue = false;
 
-		_rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+		Vector3 RandomSite = Vector3.zero;
 
-		float randomX = UnityEngine.Random.Range(-360f, 360f);
-		float randomY = UnityEngine.Random.Range(-360f, 360f);
-		float randomZ = UnityEngine.Random.Range(-360f, 360f);
+		switch (UnityEngine.Random.Range(1, 5))
+		{
+			case 1:
+				RandomSite = Vector3.forward;
+				break;
+			case 2:
+				RandomSite = Vector3.back;
+				break;
+			case 3:
+				RandomSite = Vector3.right;
+				break;
+			case 4:
+				RandomSite = Vector3.left;
+				break;
+		}
+
+		_rigidbody.AddForce((Vector3.up + (RandomSite / 2)) * _jumpForce, ForceMode.Impulse);
+
+		float randomX = UnityEngine.Random.Range(-180, 180);
+		float randomY = UnityEngine.Random.Range(-180, 180);
+		float randomZ = UnityEngine.Random.Range(-180, 180);
 
 		_rigidbody.AddTorque(randomX, randomY, randomZ);
 	}
