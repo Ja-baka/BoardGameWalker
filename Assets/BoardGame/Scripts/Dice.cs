@@ -26,31 +26,31 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 
 		_isActualValue = false;
 
-		Vector3 RandomSite = Vector3.zero;
-
-		switch (UnityEngine.Random.Range(1, 5))
-		{
-			case 1:
-				RandomSite = Vector3.forward;
-				break;
-			case 2:
-				RandomSite = Vector3.back;
-				break;
-			case 3:
-				RandomSite = Vector3.right;
-				break;
-			case 4:
-				RandomSite = Vector3.left;
-				break;
-		}
-
-		_rigidbody.AddForce((Vector3.up + (RandomSite / 2)) * _jumpForce, ForceMode.Impulse);
+		Vector3 randomDirection = GenerateRandomDirection();
+		Vector3 jumpDirection = Vector3.up + (randomDirection / 2);
+		_rigidbody.AddForce
+		(
+			jumpDirection * _jumpForce, 
+			ForceMode.Impulse
+		);
 
 		float randomX = UnityEngine.Random.Range(-180, 180);
 		float randomY = UnityEngine.Random.Range(-180, 180);
 		float randomZ = UnityEngine.Random.Range(-180, 180);
 
 		_rigidbody.AddTorque(randomX, randomY, randomZ);
+	}
+
+	private static Vector3 GenerateRandomDirection()
+	{
+		return UnityEngine.Random.Range(1, 5) switch
+		{
+			1 => Vector3.forward,
+			2 => Vector3.back,
+			3 => Vector3.right,
+			4 => Vector3.left,
+			_ => Vector3.zero,
+		};
 	}
 
 	private void Start()
