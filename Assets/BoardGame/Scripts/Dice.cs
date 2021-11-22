@@ -5,8 +5,9 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Rigidbody))]
 public class Dice : MonoBehaviour, IPointerClickHandler
 {
-	public EventHandler<DiceEventArgs> RolledEvent;
+	[HideInInspector] public EventHandler<DiceEventArgs> RolledEvent;
 
+	private bool _isActualValue = false;
 	private Rigidbody _rigidbody;
 
 	private const float _jumpForce = 10f;
@@ -22,6 +23,8 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 		{
 			return;
 		}
+
+		_isActualValue = false;
 
 		_rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
 
@@ -39,7 +42,8 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 
     private void FixedUpdate()
     {
-        if (_rigidbody.IsSleeping() == true)
+        if (_rigidbody.IsSleeping() == true
+			&& _isActualValue == false)
         {
 			DiceSideCheck();
         }
@@ -52,6 +56,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 			if (side.IsGrounded)
 			{
 				RolledEvent?.Invoke(this, new DiceEventArgs(side.SideValue));
+				_isActualValue = true;
 				return;
 			}
 		}
