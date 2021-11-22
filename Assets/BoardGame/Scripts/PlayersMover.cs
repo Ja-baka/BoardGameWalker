@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayersMover : MonoBehaviour
 {
-	[SerializeField] private float _speed = 5f;
-
 	private Player[] _players;
 	private Player _activePlayer;
 	private Point[] _points;
@@ -14,6 +12,7 @@ public class PlayersMover : MonoBehaviour
 	private int _targetPointIndex;
 	private int _endPointIndex;
 
+	private const float _speed = 5f;
 	private readonly WaitForSeconds _waitforSecond = new WaitForSeconds(0.1f);
 
 	private void OnEnable()
@@ -24,9 +23,14 @@ public class PlayersMover : MonoBehaviour
 		Transform path = FindObjectOfType<Path>().transform;
 		_points = path.GetComponentsInChildren<Point>(); ;
 
-
 		_players = FindObjectsOfType<Player>();
 		_activePlayer = _players[0];
+	}
+
+	private void OnDisable()
+	{
+		Dice dice = FindObjectOfType<Dice>();
+		dice.RolledEvent -= StartMoving;
 	}
 
 	private void StartMoving(object sender, DiceEventArgs e)
@@ -67,17 +71,20 @@ public class PlayersMover : MonoBehaviour
 			yield break;
 		}
 
-		Debug.Log("SwitchToNextPoint");
 		yield return _waitforSecond;
 		_activePlayer.CurrentPoint++;
 		_targetPointIndex++;
 
+		if (_activePlayer.CurrentPoint == _points.Length - 1)
+		{
+			Debug.Log("Победа");
+			StopCoroutine(_movingCoroutine);
+			_movingCoroutine = null;
+			yield break;
+		}
+
 		if (_activePlayer.CurrentPoint >= _endPointIndex)
 		{
-			if (_endPointIndex == _points.Length)
-			{
-				Debug.Log("Победа");
-			}
 			StopCoroutine(_movingCoroutine);
 			_movingCoroutine = null;
 		}
