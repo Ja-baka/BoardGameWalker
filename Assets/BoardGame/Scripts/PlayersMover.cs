@@ -17,8 +17,7 @@ public class PlayersMover : MonoBehaviour
 
 	private void OnEnable()
 	{
-		Dice dice = FindObjectOfType<Dice>();
-		dice.RolledEvent += StartMoving;
+		FindObjectOfType<Dice>().RolledEvent += StartMoving;
 
 		Transform path = FindObjectOfType<Path>().transform;
 		_points = path.GetComponentsInChildren<Point>(); ;
@@ -29,8 +28,7 @@ public class PlayersMover : MonoBehaviour
 
 	private void OnDisable()
 	{
-		Dice dice = FindObjectOfType<Dice>();
-		dice.RolledEvent -= StartMoving;
+		FindObjectOfType<Dice>().RolledEvent -= StartMoving;
 	}
 
 	private void StartMoving(object sender, DiceEventArgs e)
