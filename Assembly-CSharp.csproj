@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\BoardGame\Scripts\DiceEventArgs.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Dice.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Player.cs" />
     <Compile Include="Assets\BoardGame\Scripts\DiceSide.cs" />
@@ -62,7 +63,7 @@
     <Compile Include="Assets\BoardGame\Scripts\Path.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Ground.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Point.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\DiceEventArgs.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\Message.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />

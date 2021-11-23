@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayersMover : MonoBehaviour
 {
 	private Player[] _players;
+	private int _IndexActivePlayer;
 	private Player _activePlayer;
 	private Point[] _points;
 	private Coroutine _movingCoroutine = null;
@@ -23,12 +24,17 @@ public class PlayersMover : MonoBehaviour
 		_points = path.GetComponentsInChildren<Point>(); ;
 
 		_players = FindObjectsOfType<Player>();
-		_activePlayer = _players[0];
+		_IndexActivePlayer = 0;
+		_activePlayer = _players[_IndexActivePlayer];
 	}
 
 	private void OnDisable()
 	{
-		FindObjectOfType<Dice>().RolledEvent -= StartMoving;
+		Dice dice = FindObjectOfType<Dice>();
+		if (dice != null)
+		{
+			dice.RolledEvent -= StartMoving;
+		}
 	}
 
 	private void StartMoving(object sender, DiceEventArgs e)
@@ -77,15 +83,30 @@ public class PlayersMover : MonoBehaviour
 		if (_activePlayer.CurrentPoint == _points.Length - 1)
 		{
 			Debug.Log("Победа");
-			StopCoroutine(_movingCoroutine);
-			_movingCoroutine = null;
+			FinishMove();
 			yield break;
 		}
 
 		if (_activePlayer.CurrentPoint >= _endPointIndex)
 		{
-			StopCoroutine(_movingCoroutine);
-			_movingCoroutine = null;
+			FinishMove();
 		}
+	}
+
+	private void FinishMove()
+	{
+		StopCoroutine(_movingCoroutine);
+		_movingCoroutine = null;
+		Message message = Resources.FindObjectsOfTypeAll<Message>()[0];
+		message.gameObject.SetActive(true);
+		SwichActivePlayer();
+	}
+
+	private void SwichActivePlayer()
+	{
+		_IndexActivePlayer++;
+		_IndexActivePlayer = _IndexActivePlayer < _players.Length ? _IndexActivePlayer : 0;
+
+		_activePlayer = _players[_IndexActivePlayer];
 	}
 }
