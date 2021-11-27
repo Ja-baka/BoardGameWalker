@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayersMover : MonoBehaviour
 {
+	public Player ActivePlayer => _activePlayer;
+
 	private Player[] _players;
-	private int _IndexActivePlayer;
 	private Player _activePlayer;
+	private int _IndexActivePlayer;
 	private Point[] _points;
 	private Coroutine _movingCoroutine = null;
 	private Vector3 _targetPoint;
@@ -18,7 +20,8 @@ public class PlayersMover : MonoBehaviour
 
 	private void OnEnable()
 	{
-		FindObjectOfType<Dice>().RolledEvent += StartMoving;
+		var dice = FindObjectOfType<Dice>();
+		dice.RolledEvent += StartMoving;
 
 		Transform path = FindObjectOfType<Path>().transform;
 		_points = path.GetComponentsInChildren<Point>(); ;
@@ -83,6 +86,12 @@ public class PlayersMover : MonoBehaviour
 		if (_activePlayer.CurrentPoint == _points.Length - 1)
 		{
 			Debug.Log("Победа");
+			foreach (Player player in _players)
+			{
+				player.gameObject.SetActive(false);
+			}
+			var mainMenu = FindObjectOfType<MainMenu>();
+			mainMenu.gameObject.SetActive(true);
 			FinishMove();
 			yield break;
 		}

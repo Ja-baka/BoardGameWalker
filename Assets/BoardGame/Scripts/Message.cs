@@ -1,18 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Message : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private TextMeshPro _text;
+    private Player _activePlayer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Start()
+	{
+		_text = FindObjectOfType<TextMeshPro>();
+		PlayersMover mover = FindObjectOfType<PlayersMover>();
+		_activePlayer = mover.ActivePlayer;
+	}
 }
