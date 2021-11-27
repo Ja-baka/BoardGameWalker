@@ -90,8 +90,9 @@ public class PlayersMover : MonoBehaviour
 			{
 				player.gameObject.SetActive(false);
 			}
-			var mainMenu = FindObjectOfType<MainMenu>();
+			MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
 			mainMenu.gameObject.SetActive(true);
+
 			FinishMove();
 			yield break;
 		}

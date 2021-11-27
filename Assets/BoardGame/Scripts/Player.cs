@@ -3,7 +3,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public Vector3 Offset;
-	public Color _color;
+
+	public Color Color;
+	public string Name;
 
 	[HideInInspector] public int CurrentPoint = 0;
 
