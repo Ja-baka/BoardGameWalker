@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
 	private Scrollbar _scrollbar;
 	private TMP_InputField[] _inputFields;
-	private List<Player> _players;
+	private Player[] _players;
 	private PlayersMover _playersMover;
 
 	public void SetInputFieldInteractable()
@@ -31,11 +31,14 @@ public class MainMenu : MonoBehaviour
 	{
 		for (int i = 0; i < _inputFields.Length; i++)
 		{
-			if (_inputFields[i].interactable == true)
+			if (_inputFields[i].interactable == false)
 			{
-				_players[i].Name
-					= _inputFields[i].textComponent.text;
+				continue;
 			}
+			string input = _inputFields[i].textComponent.text;
+			_players[i].Name = input != string.Empty
+				? input 
+				: $"Игрок {i + 1}";
 		}
 	}
 
@@ -46,7 +49,7 @@ public class MainMenu : MonoBehaviour
 
 	private void ShowPlayers()
 	{
-		for (int i = 0; i < _players.Count; i++)
+		for (int i = 0; i < _players.Length; i++)
 		{
 			bool isActive = _inputFields[i].interactable;
 			_players[i].gameObject.SetActive(isActive);
@@ -60,18 +63,15 @@ public class MainMenu : MonoBehaviour
 		_scrollbar = GetComponentInChildren<Scrollbar>();
 		_inputFields = GetComponentsInChildren<TMP_InputField>();
 
-		Player[] playersArray = Resources.FindObjectsOfTypeAll<Player>();
-		_players = new List<Player>(playersArray);
-		List<Player> tempPlayerList = new List<Player>(playersArray);
-
-		foreach (Player player in _players)
+		List<Player> tempPlayersList = new List<Player>();
+		foreach (Player player1 in Resources.FindObjectsOfTypeAll<Player>())
 		{
-			if (EditorUtility.IsPersistent(player) == true)
+			if (EditorUtility.IsPersistent(player1) == false)
 			{
-				tempPlayerList.Remove(player);
+				tempPlayersList.Add(player1);
 			}
 		}
-		_players = tempPlayerList;
+		_players = tempPlayersList.ToArray();
 
 		_playersMover = Resources.FindObjectsOfTypeAll<PlayersMover>()[0];
 	}

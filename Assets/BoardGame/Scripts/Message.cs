@@ -4,13 +4,14 @@ using TMPro;
 
 public class Message : MonoBehaviour
 {
-    private TextMeshPro _text;
+    private TextMeshProUGUI _text;
     private Player _activePlayer;
 
-	private void Start()
+	private void OnEnable()
 	{
-		_text = FindObjectOfType<TextMeshPro>();
+		_text = GetComponentInChildren<TextMeshProUGUI>();
 		PlayersMover mover = FindObjectOfType<PlayersMover>();
 		_activePlayer = mover.ActivePlayer;
+		_text.text = $"Ход игрока {_activePlayer.Name}!";
 	}
 }

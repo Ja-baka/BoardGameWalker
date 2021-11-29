@@ -67,14 +67,14 @@ public class PlayersMover : MonoBehaviour
 		_activePlayer.transform.position = Vector3.MoveTowards
 		(
 			_activePlayer.transform.position,
-			_targetPoint,
+			_targetPoint + _activePlayer.Offset,
 			_speed * Time.deltaTime
 		);
 	}
 
 	private IEnumerator SwitchToNextPoint()
 	{
-		if (_activePlayer.transform.position != _targetPoint)
+		if (_activePlayer.transform.position != _targetPoint + _activePlayer.Offset)
 		{
 			yield break;
 		}
@@ -85,37 +85,45 @@ public class PlayersMover : MonoBehaviour
 
 		if (_activePlayer.CurrentPoint == _points.Length - 1)
 		{
-			Debug.Log("Победа");
-			foreach (Player player in _players)
-			{
-				player.gameObject.SetActive(false);
-			}
-			MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
-			mainMenu.gameObject.SetActive(true);
-
 			FinishMove();
+			FinishGame();
 			yield break;
 		}
 
-		if (_activePlayer.CurrentPoint >= _endPointIndex)
+		if (_activePlayer.CurrentPoint == _endPointIndex)
 		{
+			Message message = Resources.FindObjectsOfTypeAll<Message>()[0];
+			message.gameObject.SetActive(true);
 			FinishMove();
 		}
+	}
+
+	private void FinishGame()
+	{
+		foreach (Player player in _players)
+		{
+			player.gameObject.SetActive(false);
+			player.transform.position = _points[0].transform.position + player.Offset;
+		}
+
+
+		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
+		mainMenu.gameObject.SetActive(true);
 	}
 
 	private void FinishMove()
 	{
 		StopCoroutine(_movingCoroutine);
 		_movingCoroutine = null;
-		Message message = Resources.FindObjectsOfTypeAll<Message>()[0];
-		message.gameObject.SetActive(true);
 		SwichActivePlayer();
 	}
 
 	private void SwichActivePlayer()
 	{
 		_IndexActivePlayer++;
-		_IndexActivePlayer = _IndexActivePlayer < _players.Length ? _IndexActivePlayer : 0;
+		_IndexActivePlayer = _IndexActivePlayer < _players.Length 
+			? _IndexActivePlayer 
+			: 0;
 
 		_activePlayer = _players[_IndexActivePlayer];
 	}
