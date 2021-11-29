@@ -1,37 +1,13 @@
 using UnityEngine;
 using TMPro;
 
-public enum PointType
-{
-	Normal,
-	Positive,
-	Negative
-}
-
 public class Point : MonoBehaviour
 {
-	public TextMeshPro Text;
+	public EffectType EffectType => _effectType;
+	public int EffectValue => _effectValue;
+	public string Message => _message;
 
-	[SerializeField] private PointType _type;
-
-	private void OnEnable()
-	{
-		Text = GetComponentInChildren<TextMeshPro>();
-	}
-
-	private void OnValidate()
-	{
-		if (_type == PointType.Normal)
-		{
-			gameObject.GetComponent<MeshRenderer>().sharedMaterial.color = Color.yellow;
-		}
-		else if (_type == PointType.Positive)
-		{
-			gameObject.GetComponent<MeshRenderer>().sharedMaterial.color = Color.green;
-		}
-		else if (_type == PointType.Negative)
-		{
-			gameObject.GetComponent<MeshRenderer>().sharedMaterial.color = Color.red;
-		}
-	}
+	[SerializeField] private EffectType _effectType;
+	[SerializeField] private int _effectValue;
+	[SerializeField] private string _message;
 }

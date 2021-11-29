@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+// TODO: неявный гейм менеджер. разбить
 public class PlayersMover : MonoBehaviour
 {
 	public Player ActivePlayer => _activePlayer;
@@ -98,6 +99,37 @@ public class PlayersMover : MonoBehaviour
 		}
 	}
 
+	private void FinishMove()
+	{
+		StopCoroutine(_movingCoroutine);
+		_movingCoroutine = null;
+
+		Point currentPoint = _points[_activePlayer.CurrentPoint];
+		EffectType pointType = currentPoint.EffectType;
+		
+		// TODO: ShowMesage(currentPoint.Message);
+		if (pointType == EffectType.Normal)
+		{
+			SwichActivePlayer();
+		}
+		else if (pointType == EffectType.PlusMove)
+		{
+			// TODO: _activePlayer.Moves += currentPoint.EffectValue;
+		}
+		else if (pointType == EffectType.MinusMove)
+		{
+			// TODO: _activePlayer.Moves -= currentPoint.EffectValue;
+		}
+		else if (pointType == EffectType.PlusPoints)
+		{ 
+			StartMoving(this, new DiceEventArgs(currentPoint.EffectValue));
+		}
+		else if (pointType == EffectType.MinusPoints)
+		{
+			//StartMoving(this, new DiceEventArgs(currentPoint.EffectValue));
+		}
+	}
+
 	private void FinishGame()
 	{
 		foreach (Player player in _players)
@@ -109,13 +141,6 @@ public class PlayersMover : MonoBehaviour
 
 		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
 		mainMenu.gameObject.SetActive(true);
-	}
-
-	private void FinishMove()
-	{
-		StopCoroutine(_movingCoroutine);
-		_movingCoroutine = null;
-		SwichActivePlayer();
 	}
 
 	private void SwichActivePlayer()

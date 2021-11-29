@@ -65,6 +65,7 @@
     <Compile Include="Assets\BoardGame\Scripts\Path.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Ground.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Point.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\PointType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />

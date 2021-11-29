@@ -36,9 +36,10 @@ public class MainMenu : MonoBehaviour
 				continue;
 			}
 			string input = _inputFields[i].textComponent.text;
-			_players[i].Name = input != string.Empty
-				? input 
-				: $"Игрок {i + 1}";
+			bool isEmpty = input.Length == 0;
+			_players[i].Name = isEmpty
+				? $" Игрок №{i + 1}"
+				: input;
 		}
 	}
 
