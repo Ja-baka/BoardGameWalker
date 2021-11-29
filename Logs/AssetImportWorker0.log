@@ -3504,3 +3504,243 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004846 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.158 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1158ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (929ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (355ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (276ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1495 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.8 MB.
+System memory in use after: 69.9 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2069.
+Total: 3.320900 ms (FindLiveObjects: 0.165100 ms CreateObjectMapping: 0.041300 ms MarkObjects: 3.097900 ms  DeleteObjects: 0.015700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.112400 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.191 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3213ms)
+		BeginReloadAssembly (595ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (64ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (267ms)
+		EndReloadAssembly (2503ms)
+			LoadAssemblies (1171ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (333ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (949ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (638ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1495 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.8 MB.
+System memory in use after: 69.9 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2071.
+Total: 4.458700 ms (FindLiveObjects: 0.641300 ms CreateObjectMapping: 0.074600 ms MarkObjects: 3.711000 ms  DeleteObjects: 0.030800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 11963.601237 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGrey.jpg
+  artifactKey: Guid(0e3be01a5b597bb40a5f7c4ddaa1cab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGrey.jpg using Guid(0e3be01a5b597bb40a5f7c4ddaa1cab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeab62d9ecab86d85264a1f288226054') in 1.292234 seconds 
+  Import took 1.296545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.353013 seconds.
+  path: Assets/BoardGame/Resourses/Materials/Table.mat
+  artifactKey: Guid(1688423e284673e4c913862329826975) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Materials/Table.mat using Guid(1688423e284673e4c913862329826975) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d79e29fecb2a28ea3afdd85485246ae') in 0.107032 seconds 
+  Import took 0.112652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.828825 seconds.
+  path: Assets/BoardGame/Resourses/Prefubs/GamePiece.prefab
+  artifactKey: Guid(0992194802b203c468a8927ec2a90e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Prefubs/GamePiece.prefab using Guid(0992194802b203c468a8927ec2a90e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928d246efad3ce6e9d6552e11307093d') in 0.050659 seconds 
+  Import took 0.055249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 103.081664 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGrey 1.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGrey 1.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9383c4f820694890d0a615ad433b3075') in 0.057998 seconds 
+  Import took 0.061162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.527304 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a214230e8d5aeec24379b98bc05fab') in 0.016266 seconds 
+  Import took 0.020004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.328340 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0a2419e7fec4a82f06e47daab9f3217') in 0.040154 seconds 
+  Import took 0.043332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.857004 seconds.
+  path: Assets/BoardGame/Resourses/Materials/Table.mat
+  artifactKey: Guid(1688423e284673e4c913862329826975) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Materials/Table.mat using Guid(1688423e284673e4c913862329826975) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293b33e4631074b77a2b26d583ebc90e') in 0.017928 seconds 
+  Import took 0.022469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.439024 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '876df9c36bd358498296b4390f7f0199') in 0.015872 seconds 
+  Import took 0.019938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.660471 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14af594cd4c8cd33cc1d941727d7106') in 0.022911 seconds 
+  Import took 0.026872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.108765 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce1b9177e36a52596b542ddad279f71a') in 0.016396 seconds 
+  Import took 0.022195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.837350 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34553adf4d9548c4f04ed3aa0244ea4c') in 0.029700 seconds 
+  Import took 0.033880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.690061 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e70787d3027c6ee07a23b708339dd98a') in 0.015345 seconds 
+  Import took 0.018606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.700102 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88fd8e8eac778c26667b8074c80d88b') in 0.015596 seconds 
+  Import took 0.019092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.387384 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f66c6b2a28dc64f80cbbae16c70c57b3') in 0.018796 seconds 
+  Import took 0.022424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.226636 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f97c8b7b9d8ea41b8ff3e3246e7a2887') in 0.014005 seconds 
+  Import took 0.016677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.832553 seconds.
+  path: Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg
+  artifactKey: Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/TableGreyNormalmap.jpg using Guid(0618b91fae545314f935ab822ce42252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1349c968fcb1f73743793e4788a04b') in 0.017229 seconds 
+  Import took 0.021499 seconds .
+
