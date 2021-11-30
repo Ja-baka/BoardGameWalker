@@ -1,11 +1,10 @@
 using UnityEngine;
-using TMPro;
 
 public class Point : MonoBehaviour
 {
-	public EffectType EffectType => _effectType;
-	public int EffectValue => _effectValue;
-	public string Message => _message;
+    public EffectType EffectType => _effectType;
+    public int EffectValue => _effectValue;
+    public string Message => _message;
 
 	[SerializeField] private EffectType _effectType;
 	[SerializeField] private int _effectValue;

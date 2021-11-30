@@ -5,13 +5,20 @@ using TMPro;
 public class MessageMenu : MonoBehaviour
 {
     private TextMeshProUGUI _text;
-    private Player _nextPlayer;
 
-	public void ShowMessage(string message)
+    private void OnEnable()
+    {
+        Time.timeScale = 0;
+    }
+
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void ShowMessage(string message)
 	{
 		_text = GetComponentInChildren<TextMeshProUGUI>();
-		PlayersMover mover = FindObjectOfType<PlayersMover>();
-		_nextPlayer = mover.NextPlayer;
-		_text.text = $"Сейчас ходит {_nextPlayer.Name}!";
+		_text.text = message;
 	}
 }

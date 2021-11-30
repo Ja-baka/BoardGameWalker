@@ -39,7 +39,7 @@ public class MainMenu : MonoBehaviour
 			int emptyStringLenght = 1; // так работает inputField
 			bool isEmpty = input.Length == emptyStringLenght;
 			_players[i].Name = isEmpty
-				? $" Игрок №{i + 1}"
+				? $" Игрок {i + 1}"
 				: input;
 		}
 	}

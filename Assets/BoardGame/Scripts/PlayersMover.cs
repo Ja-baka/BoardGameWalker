@@ -21,7 +21,7 @@ public class PlayersMover : MonoBehaviour
 	private void OnEnable()
 	{
 		Dice dice = FindObjectOfType<Dice>();
-		dice.RolledEvent += StartMoving;
+		dice.Rolled += StartMoving;
 
 		Transform path = FindObjectOfType<Path>().transform;
 		_points = path.GetComponentsInChildren<Point>();
@@ -34,10 +34,7 @@ public class PlayersMover : MonoBehaviour
 	private void OnDisable()
 	{
 		Dice dice = FindObjectOfType<Dice>();
-		if (dice != null)
-		{
-			dice.RolledEvent -= StartMoving;
-		}
+		dice.Rolled -= StartMoving;
 	}
 
 	private void StartMoving(object sender, DiceEventArgs e)
@@ -130,11 +127,11 @@ public class PlayersMover : MonoBehaviour
 
         if (pointType == EffectType.Normal)
 		{
-            messageMenu.ShowMessage($"Ход игрока {NextPlayer}");
+            messageMenu.ShowMessage($"Ход игрока {NextPlayer.Name}");
             SwichActivePlayer();
             return;
         }
-        
+
 		messageMenu.ShowMessage($"{currentPoint.Message}");
         if (pointType == EffectType.MoveCount)
         {
@@ -143,9 +140,11 @@ public class PlayersMover : MonoBehaviour
                 //_indexOfActivePlayer = _indexOfActivePlayer > 0
                 //    ? _indexOfActivePlayer - 1
                 //    : _players.Length - 1;
+				Debug.Log("сделай ещё один ход");
             }
             else
             {
+				Debug.Log("пропусти ход");
 				// TODO: пропуск хода
             }
         }

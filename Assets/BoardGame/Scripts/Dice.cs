@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Rigidbody))]
 public class Dice : MonoBehaviour, IPointerClickHandler
 {
-	[HideInInspector] public EventHandler<DiceEventArgs> RolledEvent;
+	[HideInInspector] public EventHandler<DiceEventArgs> Rolled;
 
 	private bool _isActualValue = true;
 	private Rigidbody _rigidbody;
@@ -73,7 +73,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 		{
 			if (side.IsGrounded)
 			{
-				RolledEvent?.Invoke(this, new DiceEventArgs(side.SideValue));
+				Rolled?.Invoke(this, new DiceEventArgs(side.SideValue));
 				_isActualValue = true;
 				return;
 			}
