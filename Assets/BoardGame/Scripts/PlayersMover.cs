@@ -48,13 +48,13 @@ public class PlayersMover : MonoBehaviour
 		}
 	}
 
-	private IEnumerator MovmentCoroutine(int diceValue) // -2
-	{ // curr = 5
-        int direction = Mathf.Abs(diceValue) / diceValue; // -1
-		_indexOfTargetPoint = _activePlayer.CurrentPoint + direction; // 4
-		_endPointIndex = _activePlayer.CurrentPoint + diceValue; // 3
+	private IEnumerator MovmentCoroutine(int diceValue)
+	{
+        int direction = Mathf.Abs(diceValue) / diceValue;
+		_indexOfTargetPoint = _activePlayer.CurrentPoint + direction;
+		_endPointIndex = _activePlayer.CurrentPoint + diceValue;
 
-		bool isFrontMovement = diceValue > 0; // false
+		bool isFrontMovement = diceValue > 0;
 
 		while ((isFrontMovement == true
 			&& _indexOfTargetPoint <= _endPointIndex
@@ -170,7 +170,6 @@ public class PlayersMover : MonoBehaviour
 	private void SwichActivePlayer()
 	{
 		_indexOfActivePlayer = GetNextPlayerIndex();
-		
 		_activePlayer = _players[_indexOfActivePlayer];
 	}
 
@@ -178,7 +177,7 @@ public class PlayersMover : MonoBehaviour
 	{
 		int indexofNextPlayer = _indexOfActivePlayer + 1;
 
-		indexofNextPlayer = _indexOfActivePlayer < _players.Length
+		indexofNextPlayer = indexofNextPlayer < _players.Length
 			? indexofNextPlayer
 			: 0;
 
