@@ -56,7 +56,7 @@
     <Compile Include="Assets\BoardGame\Scripts\DiceEventArgs.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Dice.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Player.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\Message.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\MessageMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\DiceSide.cs" />
     <Compile Include="Assets\BoardGame\Scripts\MainMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Centre.cs" />

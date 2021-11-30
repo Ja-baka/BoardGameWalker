@@ -5,31 +5,30 @@ using UnityEngine;
 // TODO: неявный гейм менеджер. разбить
 public class PlayersMover : MonoBehaviour
 {
-	public Player ActivePlayer => _activePlayer;
+	public Player NextPlayer => _players[GetNextPlayerIndex()];
 
 	private Player[] _players;
 	private Player _activePlayer;
-	private int _IndexActivePlayer;
 	private Point[] _points;
 	private Coroutine _movingCoroutine = null;
 	private Vector3 _targetPoint;
-	private int _targetPointIndex;
+	private int _indexOfTargetPoint = 0;
 	private int _endPointIndex;
-
+	private int _indexOfActivePlayer;
 	private const float _speed = 5f;
-	private readonly WaitForSeconds _waitforSecond = new WaitForSeconds(0.1f);
+	private readonly WaitForSeconds _waitforMiliSecond = new WaitForSeconds(0.1f);
 
 	private void OnEnable()
 	{
-		var dice = FindObjectOfType<Dice>();
+		Dice dice = FindObjectOfType<Dice>();
 		dice.RolledEvent += StartMoving;
 
 		Transform path = FindObjectOfType<Path>().transform;
-		_points = path.GetComponentsInChildren<Point>(); ;
+		_points = path.GetComponentsInChildren<Point>();
 
 		_players = FindObjectsOfType<Player>();
-		_IndexActivePlayer = 0;
-		_activePlayer = _players[_IndexActivePlayer];
+		_indexOfActivePlayer = 0;
+		_activePlayer = _players[_indexOfActivePlayer];
 	}
 
 	private void OnDisable()
@@ -49,13 +48,20 @@ public class PlayersMover : MonoBehaviour
 		}
 	}
 
-	private IEnumerator MovmentCoroutine(int diceValue)
-	{
-		_targetPointIndex = _activePlayer.CurrentPoint + 1;
-		_endPointIndex = _activePlayer.CurrentPoint + diceValue;
+	private IEnumerator MovmentCoroutine(int diceValue) // -2
+	{ // curr = 5
+        int direction = Mathf.Abs(diceValue) / diceValue; // -1
+		_indexOfTargetPoint = _activePlayer.CurrentPoint + direction; // 4
+		_endPointIndex = _activePlayer.CurrentPoint + diceValue; // 3
 
-		while (_targetPointIndex <= _endPointIndex
-			&& _targetPointIndex < _points.Length)
+		bool isFrontMovement = diceValue > 0; // false
+
+		while ((isFrontMovement == true
+			&& _indexOfTargetPoint <= _endPointIndex
+			&& _indexOfTargetPoint < _points.Length)
+			|| (isFrontMovement == false
+				&& _indexOfTargetPoint >= _endPointIndex
+				&& _indexOfTargetPoint > 0))
 		{
 			MoveToCurrentPoint();
 			yield return SwitchToNextPoint();
@@ -64,7 +70,7 @@ public class PlayersMover : MonoBehaviour
 
 	private void MoveToCurrentPoint()
 	{
-		_targetPoint = _points[_targetPointIndex].transform.position;
+		_targetPoint = _points[_indexOfTargetPoint].transform.position;
 		_activePlayer.transform.position = Vector3.MoveTowards
 		(
 			_activePlayer.transform.position,
@@ -75,15 +81,28 @@ public class PlayersMover : MonoBehaviour
 
 	private IEnumerator SwitchToNextPoint()
 	{
-		if (_activePlayer.transform.position != _targetPoint + _activePlayer.Offset)
+		if (_activePlayer.transform.position 
+			!= _targetPoint + _activePlayer.Offset)
 		{
 			yield break;
 		}
 
-		yield return _waitforSecond;
-		_activePlayer.CurrentPoint++;
-		_targetPointIndex++;
+		yield return _waitforMiliSecond;
+        bool isFrontMove = _indexOfTargetPoint 
+			> _activePlayer.CurrentPoint;
 
+        if (isFrontMove)
+		{
+			_indexOfTargetPoint++;
+			_activePlayer.CurrentPoint++;
+		}
+		else
+		{
+			_indexOfTargetPoint--;
+			_activePlayer.CurrentPoint--;
+		}
+
+		// TODO: при этих условиях выходить из цикла
 		if (_activePlayer.CurrentPoint == _points.Length - 1)
 		{
 			FinishMove();
@@ -93,8 +112,6 @@ public class PlayersMover : MonoBehaviour
 
 		if (_activePlayer.CurrentPoint == _endPointIndex)
 		{
-			Message message = Resources.FindObjectsOfTypeAll<Message>()[0];
-			message.gameObject.SetActive(true);
 			FinishMove();
 		}
 	}
@@ -107,30 +124,38 @@ public class PlayersMover : MonoBehaviour
 		Point currentPoint = _points[_activePlayer.CurrentPoint];
 		EffectType pointType = currentPoint.EffectType;
 		
-		// TODO: ShowMesage(currentPoint.Message);
-		if (pointType == EffectType.Normal)
-		{
-			SwichActivePlayer();
-		}
-		else if (pointType == EffectType.PlusMove)
-		{
-			// TODO: _activePlayer.Moves += currentPoint.EffectValue;
-		}
-		else if (pointType == EffectType.MinusMove)
-		{
-			// TODO: _activePlayer.Moves -= currentPoint.EffectValue;
-		}
-		else if (pointType == EffectType.PlusPoints)
-		{ 
-			StartMoving(this, new DiceEventArgs(currentPoint.EffectValue));
-		}
-		else if (pointType == EffectType.MinusPoints)
-		{
-			//StartMoving(this, new DiceEventArgs(currentPoint.EffectValue));
-		}
-	}
+		MessageMenu messageMenu 
+			= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
+		messageMenu.gameObject.SetActive(true);
 
-	private void FinishGame()
+        if (pointType == EffectType.Normal)
+		{
+            messageMenu.ShowMessage($"Ход игрока {NextPlayer}");
+            SwichActivePlayer();
+            return;
+        }
+        
+		messageMenu.ShowMessage($"{currentPoint.Message}");
+        if (pointType == EffectType.MoveCount)
+        {
+            if (currentPoint.EffectValue == 1)
+            {
+                //_indexOfActivePlayer = _indexOfActivePlayer > 0
+                //    ? _indexOfActivePlayer - 1
+                //    : _players.Length - 1;
+            }
+            else
+            {
+				// TODO: пропуск хода
+            }
+        }
+        else if (pointType == EffectType.Position)
+        {
+            StartMoving(this, new DiceEventArgs(currentPoint.EffectValue));
+        }
+    }
+
+    private void FinishGame()
 	{
 		foreach (Player player in _players)
 		{
@@ -138,18 +163,25 @@ public class PlayersMover : MonoBehaviour
 			player.transform.position = _points[0].transform.position + player.Offset;
 		}
 
-
 		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
 		mainMenu.gameObject.SetActive(true);
 	}
 
 	private void SwichActivePlayer()
 	{
-		_IndexActivePlayer++;
-		_IndexActivePlayer = _IndexActivePlayer < _players.Length 
-			? _IndexActivePlayer 
+		_indexOfActivePlayer = GetNextPlayerIndex();
+		
+		_activePlayer = _players[_indexOfActivePlayer];
+	}
+
+	private int GetNextPlayerIndex()
+	{
+		int indexofNextPlayer = _indexOfActivePlayer + 1;
+
+		indexofNextPlayer = _indexOfActivePlayer < _players.Length
+			? indexofNextPlayer
 			: 0;
 
-		_activePlayer = _players[_IndexActivePlayer];
+		return indexofNextPlayer;
 	}
 }
