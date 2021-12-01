@@ -67,6 +67,9 @@
     <Compile Include="Assets\BoardGame\Scripts\Ground.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Point.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Background.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\DiceSoundBehaviour.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\PlayerEvent.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\PlayerSoundBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,10 +1,10 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 // TODO: неявный гейм менеджер. разбить
 public class PlayersMover : MonoBehaviour
 {
+	public System.EventHandler<PlayerEvent> MovedEvent;
 	public Player NextPlayer => _players[GetNextPlayerIndex()];
 
 	private Player[] _players;
@@ -84,6 +84,7 @@ public class PlayersMover : MonoBehaviour
 			yield break;
 		}
 
+		MovedEvent?.Invoke(this, new PlayerEvent());
 		yield return _waitforMiliSecond;
 		bool isFrontMove = _indexOfTargetPoint 
 			> _activePlayer.CurrentPoint;
