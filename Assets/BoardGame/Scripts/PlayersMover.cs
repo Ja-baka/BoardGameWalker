@@ -34,28 +34,28 @@ public class PlayersMover : MonoBehaviour
 	private void OnDisable()
 	{
 		Dice dice = FindObjectOfType<Dice>();
-		dice.Rolled -= StartMoving;
+		if (dice != null)
+		{
+			dice.Rolled -= StartMoving;
+		}
 	}
 
 	private void StartMoving(object sender, DiceEventArgs e)
 	{
-		if (_movingCoroutine == null)
-		{
-			_movingCoroutine = StartCoroutine(MovmentCoroutine(e.Value));
-		}
+		_movingCoroutine ??= StartCoroutine(MovmentCoroutine(e.Value));
 	}
 
 	private IEnumerator MovmentCoroutine(int diceValue)
 	{
-        int direction = Mathf.Abs(diceValue) / diceValue;
+		int direction = Mathf.Abs(diceValue) / diceValue;
 		_indexOfTargetPoint = _activePlayer.CurrentPoint + direction;
 		_endPointIndex = _activePlayer.CurrentPoint + diceValue;
 
 		bool isFrontMovement = diceValue > 0;
 
 		while ((isFrontMovement == true
-			&& _indexOfTargetPoint <= _endPointIndex
-			&& _indexOfTargetPoint < _points.Length)
+				&& _indexOfTargetPoint <= _endPointIndex
+				&& _indexOfTargetPoint < _points.Length)
 			|| (isFrontMovement == false
 				&& _indexOfTargetPoint >= _endPointIndex
 				&& _indexOfTargetPoint > 0))
@@ -85,10 +85,10 @@ public class PlayersMover : MonoBehaviour
 		}
 
 		yield return _waitforMiliSecond;
-        bool isFrontMove = _indexOfTargetPoint 
+		bool isFrontMove = _indexOfTargetPoint 
 			> _activePlayer.CurrentPoint;
 
-        if (isFrontMove)
+		if (isFrontMove)
 		{
 			_indexOfTargetPoint++;
 			_activePlayer.CurrentPoint++;
@@ -125,36 +125,36 @@ public class PlayersMover : MonoBehaviour
 			= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
 		messageMenu.gameObject.SetActive(true);
 
-        if (pointType == EffectType.Normal)
+		if (pointType == EffectType.Normal)
 		{
-            messageMenu.ShowMessage($"Ход игрока {NextPlayer.Name}");
-            SwichActivePlayer();
-            return;
-        }
+			messageMenu.ShowMessage($"Ход игрока {NextPlayer.Name}");
+			SwichActivePlayer();
+			return;
+		}
+		else
+		{ 
+			messageMenu.ShowMessage($"{currentPoint.Message}");
+		}
 
-		messageMenu.ShowMessage($"{currentPoint.Message}");
-        if (pointType == EffectType.MoveCount)
-        {
-            if (currentPoint.EffectValue == 1)
-            {
-                //_indexOfActivePlayer = _indexOfActivePlayer > 0
-                //    ? _indexOfActivePlayer - 1
-                //    : _players.Length - 1;
-				Debug.Log("сделай ещё один ход");
-            }
-            else
-            {
-				Debug.Log("пропусти ход");
-				// TODO: пропуск хода
-            }
-        }
-        else if (pointType == EffectType.Position)
-        {
-            StartMoving(this, new DiceEventArgs(currentPoint.EffectValue));
-        }
-    }
+		if (pointType == EffectType.MoveCount)
+		{
+			if (currentPoint.EffectValue == 1)
+			{
+				Debug.Log("дополнительный ход");
+			}
+			else
+			{
+				Debug.Log("пропуск хода");
+			}
+			SwichActivePlayer();
+		}
+		else if (pointType == EffectType.Position)
+		{
+			StartMoving(this, new DiceEventArgs(currentPoint.EffectValue));
+		}
+	}
 
-    private void FinishGame()
+	private void FinishGame()
 	{
 		foreach (Player player in _players)
 		{
