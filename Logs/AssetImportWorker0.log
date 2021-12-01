@@ -6576,3 +6576,604 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 51483.180344 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages
+  artifactKey: Guid(3dab79321962ab245a6127afe5b07eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages using Guid(3dab79321962ab245a6127afe5b07eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ced1c2318d44761fbb615f04b379d2') in 0.158756 seconds 
+  Import took 0.314310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.261330 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/2.png
+  artifactKey: Guid(c1f32b3a9696a4b4190d9846065517e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/2.png using Guid(c1f32b3a9696a4b4190d9846065517e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71ae7da29b86b5ad0f859b84c2750297') in 0.294556 seconds 
+  Import took 0.298748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/9.png
+  artifactKey: Guid(9b449b1ab1292d2459b157be1dce4ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/9.png using Guid(9b449b1ab1292d2459b157be1dce4ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be0bb3fde883eed8fa1fc4d144e64c5a') in 0.015301 seconds 
+  Import took 0.018910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/20.png
+  artifactKey: Guid(9943b7039928f0e4bad2c35417067842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/20.png using Guid(9943b7039928f0e4bad2c35417067842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfb40340a1b4f0c0395419b880ac0874') in 0.013951 seconds 
+  Import took 0.017920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/19.png
+  artifactKey: Guid(b1094fd839954ea498f2813a9b5ba4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/19.png using Guid(b1094fd839954ea498f2813a9b5ba4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9881d4c2245c93c9f769ff00752a4a8f') in 0.020051 seconds 
+  Import took 0.024261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000438 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/21.png
+  artifactKey: Guid(2a1b2f3897c3a27499b95422cb07073f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/21.png using Guid(2a1b2f3897c3a27499b95422cb07073f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '826703fa64fe5aa119efaedfbf1b4092') in 0.020177 seconds 
+  Import took 0.025700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/8.png
+  artifactKey: Guid(6a33cbf105a2e9b418519d5cb520c456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/8.png using Guid(6a33cbf105a2e9b418519d5cb520c456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c10587981e50ad2e63421daf889810c1') in 0.016729 seconds 
+  Import took 0.021296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/17.png
+  artifactKey: Guid(2a982c5cd0e4cb348be4ea42855eeb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/17.png using Guid(2a982c5cd0e4cb348be4ea42855eeb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240af1d31ff2f91ef15caa46a42d7758') in 0.018633 seconds 
+  Import took 0.023583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/11.png
+  artifactKey: Guid(c7cd97c2551571c4fa0688d30ff1f28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/11.png using Guid(c7cd97c2551571c4fa0688d30ff1f28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b97bb0a90f0ebddba1851f4f0e0221f') in 0.018632 seconds 
+  Import took 0.022537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/15.png
+  artifactKey: Guid(097574b594ce5004a981713a32cd1c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/15.png using Guid(097574b594ce5004a981713a32cd1c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b443a89c4006ff5977baa0e57809192') in 0.019367 seconds 
+  Import took 0.024880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/3.png
+  artifactKey: Guid(75474eb9460c24b4aab39193f3262546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/3.png using Guid(75474eb9460c24b4aab39193f3262546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0492933d09bb2fc456e2c4c32c6d5094') in 0.020348 seconds 
+  Import took 0.025701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/14.png
+  artifactKey: Guid(2548e14fb5a3c134da08e186b27de162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/14.png using Guid(2548e14fb5a3c134da08e186b27de162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d798d395eabd955e692f99f4914711') in 0.016985 seconds 
+  Import took 0.021841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000751 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/12.png
+  artifactKey: Guid(5d037026fea26bc48bd69de168d0f670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/12.png using Guid(5d037026fea26bc48bd69de168d0f670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb68a9b5b7fc9db4d16e52e8354d840') in 0.019452 seconds 
+  Import took 0.023383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/5.png
+  artifactKey: Guid(c6103c416c949a84a878fdc09c4842fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/5.png using Guid(c6103c416c949a84a878fdc09c4842fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29a88dc53a3e45b19c114960eb01b6ed') in 0.019829 seconds 
+  Import took 0.023675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 594.956345 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/8.png
+  artifactKey: Guid(6a33cbf105a2e9b418519d5cb520c456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/8.png using Guid(6a33cbf105a2e9b418519d5cb520c456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b0c420f84ca956ada1fbef893db0b8') in 0.164153 seconds 
+  Import took 0.167969 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.254167 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.264 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2266ms)
+		BeginReloadAssembly (623ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (37ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (392ms)
+		EndReloadAssembly (1498ms)
+			LoadAssemblies (215ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (559ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (492ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (128ms)
+				ProcessInitializeOnLoadAttributes (322ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1496 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.5 MB.
+System memory in use after: 73.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2228.
+Total: 16.608200 ms (FindLiveObjects: 0.251100 ms CreateObjectMapping: 0.073400 ms MarkObjects: 16.186100 ms  DeleteObjects: 0.095900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 218.486140 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/9.png
+  artifactKey: Guid(9b449b1ab1292d2459b157be1dce4ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/9.png using Guid(9b449b1ab1292d2459b157be1dce4ab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cc9eae1325c1f315057f3964f719bbc') in 0.089026 seconds 
+  Import took 0.092257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/2.png
+  artifactKey: Guid(c1f32b3a9696a4b4190d9846065517e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/2.png using Guid(c1f32b3a9696a4b4190d9846065517e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dcba54020203c82a0575559ef6455ea') in 0.023453 seconds 
+  Import took 0.027967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/20.png
+  artifactKey: Guid(9943b7039928f0e4bad2c35417067842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/20.png using Guid(9943b7039928f0e4bad2c35417067842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6cbbacadd9a7de7ebb590fe9a5f19a') in 0.035880 seconds 
+  Import took 0.040286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/19.png
+  artifactKey: Guid(b1094fd839954ea498f2813a9b5ba4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/19.png using Guid(b1094fd839954ea498f2813a9b5ba4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e9b5519ffc6b70d47bc1b45f8a5c0d7') in 0.026189 seconds 
+  Import took 0.030142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/17.png
+  artifactKey: Guid(2a982c5cd0e4cb348be4ea42855eeb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/17.png using Guid(2a982c5cd0e4cb348be4ea42855eeb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31be6e0cce02621c9f051379a4d0a40b') in 0.021955 seconds 
+  Import took 0.027571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/11.png
+  artifactKey: Guid(c7cd97c2551571c4fa0688d30ff1f28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/11.png using Guid(c7cd97c2551571c4fa0688d30ff1f28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0814026e77fb5bbae9b8b136fc567af1') in 0.021226 seconds 
+  Import took 0.024982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/15.png
+  artifactKey: Guid(097574b594ce5004a981713a32cd1c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/15.png using Guid(097574b594ce5004a981713a32cd1c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4087d464bba14063bd5a0d8947f6788') in 0.031064 seconds 
+  Import took 0.036104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/3.png
+  artifactKey: Guid(75474eb9460c24b4aab39193f3262546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/3.png using Guid(75474eb9460c24b4aab39193f3262546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eadbf4cffb6950f44c64d703b1bbb131') in 0.029898 seconds 
+  Import took 0.037572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/14.png
+  artifactKey: Guid(2548e14fb5a3c134da08e186b27de162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/14.png using Guid(2548e14fb5a3c134da08e186b27de162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b080b73b5aa36e1f5622376c2a8e217e') in 0.018689 seconds 
+  Import took 0.021897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/12.png
+  artifactKey: Guid(5d037026fea26bc48bd69de168d0f670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/12.png using Guid(5d037026fea26bc48bd69de168d0f670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a9e231bba5c793f449e4ff508f75f2') in 0.024184 seconds 
+  Import took 0.028600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/5.png
+  artifactKey: Guid(c6103c416c949a84a878fdc09c4842fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/5.png using Guid(c6103c416c949a84a878fdc09c4842fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b2d0a157ca04ee7d13960bd7047b9ad') in 0.023073 seconds 
+  Import took 0.026357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.580477 seconds.
+  path: Assets/BoardGame/Resourses/Textures/Messages/21.png
+  artifactKey: Guid(2a1b2f3897c3a27499b95422cb07073f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BoardGame/Resourses/Textures/Messages/21.png using Guid(2a1b2f3897c3a27499b95422cb07073f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1b18ad0e9afe2ff4437985013b535d3') in 0.022309 seconds 
+  Import took 0.026696 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009879 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Domain Reload Profiling:
+	ReloadAssembly (963ms)
+		BeginReloadAssembly (129ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (772ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (290ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (195ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1496 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.5 MB.
+System memory in use after: 73.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2236.
+Total: 3.491700 ms (FindLiveObjects: 0.183600 ms CreateObjectMapping: 0.046600 ms MarkObjects: 3.245600 ms  DeleteObjects: 0.015200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006468 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.052 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1053ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (856ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (300ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (319ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (226ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1496 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.5 MB.
+System memory in use after: 73.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2238.
+Total: 3.221300 ms (FindLiveObjects: 0.170400 ms CreateObjectMapping: 0.043600 ms MarkObjects: 2.989000 ms  DeleteObjects: 0.017300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004595 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.246 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1246ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (1035ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (300ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (491ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (198ms)
+				ProcessInitializeOnLoadAttributes (272ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1496 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.5 MB.
+System memory in use after: 73.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2240.
+Total: 3.338800 ms (FindLiveObjects: 0.213500 ms CreateObjectMapping: 0.053600 ms MarkObjects: 3.042900 ms  DeleteObjects: 0.027700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005444 seconds.
+Callback registration failed. Increase kMaxCallback.
+Fatal Error! Callback registration failed. Increase kMaxCallback.
+Crash!!!
+SymInit: Symbol-SearchPath: 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Mono;.;C:\soft\UnityHub\Projects\BoarGame draft;C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor;C:\Windows;C:\Windows\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 534, UserName: 'nikol'
+OS-Version: 10.0.0
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Unity.exe:Unity.exe (00007FF79D360000), size: 135417856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.21.35974
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FFDF9610000), size: 2052096 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1288
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FFDF7940000), size: 778240 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FFDF6ED0000), size: 2920448 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FFDF7310000), size: 1400832 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FFDF6DD0000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\USER32.dll:USER32.dll (00007FFDF7E80000), size: 1708032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\win32u.dll:win32u.dll (00007FFDF7630000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1288
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\libfbxsdk.dll:libfbxsdk.dll (00007FFD98870000), size: 10215424 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.2.0.0
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\OpenImageDenoise.dll:OpenImageDenoise.dll (00007FFD95EA0000), size: 43806720 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FFDF8D90000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\optix.6.0.0.dll:optix.6.0.0.dll (00007FFDCDE00000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.0.0.0
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FFDF7200000), size: 1093632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1110
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FFDF6D30000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FFDF7720000), size: 704512 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1052
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FFDF77D0000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.546
+C:\Windows\System32\sechost.dll:sechost.dll (00007FFDF8C50000), size: 634880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\umbraoptimizer64.dll:umbraoptimizer64.dll (00007FFDBA2F0000), size: 1306624 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\FreeImage.dll:FreeImage.dll (0000000180000000), size: 6582272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.18.0.0
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FFDF9560000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FFDF8B20000), size: 1220608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1288
+C:\Windows\System32\WLDAP32.dll:WLDAP32.dll (00007FFDF7E10000), size: 352256 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FFDF8DC0000), size: 7598080 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\Normaliz.dll:Normaliz.dll (00007FFDF7E70000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\ispc_texcomp.dll:ispc_texcomp.dll (00007FFDB9BC0000), size: 1609728 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FFDF9500000), size: 348160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1023
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FFDEF7A0000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.1812.6001
+C:\Windows\System32\ole32.dll:ole32.dll (00007FFDF8990000), size: 1220608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\combase.dll:combase.dll (00007FFDF81B0000), size: 3493888 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1288
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\tbb.dll:tbb.dll (00007FFDBDF80000), size: 413696 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2017.0.2016.1004
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FFDF7660000), size: 196608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FFDDBDC0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.31.30818.0
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FFDF8510000), size: 4661248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1237
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FFDF75B0000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1151
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FFDF7600000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1023
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FFDB9380000), size: 581632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.31.30818.0
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FFDF7870000), size: 839680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.985
+C:\Windows\System32\WINTRUST.dll:WINTRUST.dll (00007FFDF71A0000), size: 393216 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FFDC6B70000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1081
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FFDC6B40000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1081
+C:\Windows\SYSTEM32\MSVCP120.dll:MSVCP120.dll (00007FFDE58F0000), size: 679936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 12.0.40649.5
+C:\Windows\SYSTEM32\MSVCR120.dll:MSVCR120.dll (00007FFDE8730000), size: 978944 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 12.0.40649.5
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FFDF6180000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FFDED5B0000), size: 1081344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1151
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\RadeonImageFilters.dll:RadeonImageFilters.dll (00007FFDB7A90000), size: 2535424 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.5.1.0
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FFDF55A0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FFDD2A70000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\SketchUpAPI.dll:SketchUpAPI.dll (00007FFD9A240000), size: 8978432 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 19.0.753.0
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FFDEDD10000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FFDDC150000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.31.30818.0
+C:\Windows\SYSTEM32\WSOCK32.dll:WSOCK32.dll (00007FFDEBDF0000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\SketchUpCommonPreferences.dll:SketchUpCommonPreferences.dll (00007FFDB9480000), size: 483328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 19.0.753.20342
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FFDE5A80000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FFDF6C20000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\OpenRL.dll:OpenRL.dll (00000252CA440000), size: 12779520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.5.0.2907
+C:\Windows\SYSTEM32\MSVCP100.dll:MSVCP100.dll (0000000055090000), size: 622592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\embree.dll:embree.dll (00007FFD944A0000), size: 16711680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.14.0.0
+C:\Windows\SYSTEM32\MSWSOCK.DLL:MSWSOCK.DLL (00007FFDF64E0000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\MSVCR100.dll:MSVCR100.dll (0000000054FB0000), size: 860160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\OpenRL_pthread.dll:OpenRL_pthread.dll (00000252CB090000), size: 61440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.9.0.0
+C:\Windows\SYSTEM32\MSASN1.dll:MSASN1.dll (00007FFDF6910000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FFDF55B0000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FFDF7470000), size: 536576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FFDF43B0000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\shcore.dll:shcore.dll (00007FFDF8050000), size: 708608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FFDF4E10000), size: 7929856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FFDF6780000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.662
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FFDF6C70000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.844
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FFDF8100000), size: 692224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\System32\netprofm.dll:netprofm.dll (00007FFDF17E0000), size: 253952 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Windows\System32\npmproxy.dll:npmproxy.dll (00007FFDEDC20000), size: 65536 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Windows\System32\NSI.dll:NSI.dll (00007FFDF8CF0000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.610
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FFDEE9F0000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FFDEE9D0000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FFDF61C0000), size: 835584 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\fwpuclnt.dll:fwpuclnt.dll (00007FFDECC10000), size: 520192 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FFDED1D0000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\Tools\astcenc-avx2.dll:astcenc-avx2.dll (00007FFD9B070000), size: 557056 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FFDF2A30000), size: 2506752 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FFDF5620000), size: 999424 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\DriverStore\FileRepository\nvhm.inf_amd64_4bae2bfda6ecbdc0\nvldumdx.dll:nvldumdx.dll (00007FFDB90B0000), size: 1069056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 27.21.14.6280
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FFDEDCD0000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FFDF66F0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FFDF8030000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FFDF66D0000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\rsaenh.dll:rsaenh.dll (00007FFDF5DF0000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1052
+C:\Windows\System32\DriverStore\FileRepository\nvhm.inf_amd64_4bae2bfda6ecbdc0\nvwgf2umx.dll:nvwgf2umx.dll (00007FFD6EFF0000), size: 77426688 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 27.21.14.6280
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FFDD8A70000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FFDEB340000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1081
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FFDEB2A0000), size: 598016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1081
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FFDE8D60000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1081
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FFDE9CC0000), size: 1093632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FFDE7A50000), size: 102400 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\USERENV.dll:USERENV.dll (00007FFDF6BF0000), size: 188416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.572
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2110.6-0\MpOav.dll:MpOav.dll (00007FFDE61E0000), size: 499712 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 4.18.2110.6
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\cudart64_90.dll:cudart64_90.dll (00007FFDA11B0000), size: 397312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.14.11.9000
+C:\Windows\SYSTEM32\opencl.dll:opencl.dll (00007FFD99A20000), size: 1462272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.2.8.0
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\radeonrays.dll:radeonrays.dll (00007FFD9AFE0000), size: 552960 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFD90730000), size: 7794688 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\PSAPI.DLL:PSAPI.DLL (00007FFDF8D00000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\ProgramData\Microsoft\VisualStudio\Setup\x64\Microsoft.VisualStudio.Setup.Configuration.Native.dll:Microsoft.VisualStudio.Setup.Configuration.Native.dll (00007FFDA05F0000), size: 327680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.11.47.9733
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FFDF2470000), size: 1007616 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.1023
+C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\comctl32.dll:comctl32.dll (00007FFDE4EB0000), size: 2727936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.10.19041.1110
+C:\Windows\SYSTEM32\WindowsCodecs.dll:WindowsCodecs.dll (00007FFDDB0C0000), size: 1785856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1151
+C:\Windows\System32\thumbcache.dll:thumbcache.dll (00007FFDC6A20000), size: 417792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1151
+C:\Windows\SYSTEM32\policymanager.dll:policymanager.dll (00007FFDF23D0000), size: 655360 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\SYSTEM32\msvcp110_win.dll:msvcp110_win.dll (00007FFDF5E80000), size: 565248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\MrmCoreR.dll:MrmCoreR.dll (00007FFDDD3B0000), size: 1003520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\iertutil.dll:iertutil.dll (00007FFDE3790000), size: 2818048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.19041.1266
+C:\Windows\SYSTEM32\windows.staterepositorycore.dll:windows.staterepositorycore.dll (00007FFDEC8A0000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.844
+C:\Windows\System32\bcp47mrm.dll:bcp47mrm.dll (00007FFDF0450000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\Windows.UI.dll:Windows.UI.dll (00007FFDDB4A0000), size: 1314816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\System32\WindowManagementAPI.dll:WindowManagementAPI.dll (00007FFDDC450000), size: 659456 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\TextInputFramework.dll:TextInputFramework.dll (00007FFDDB280000), size: 1019904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\Windows\System32\InputHost.dll:InputHost.dll (00007FFDDAF60000), size: 1384448 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FFDF28D0000), size: 1392640 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\SYSTEM32\twinapi.appcore.dll:twinapi.appcore.dll (00007FFDEEC20000), size: 2101248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.964
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FFDF3F90000), size: 991232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FFDF38B0000), size: 3530752 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FFDF5B40000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.1288_none_91a663c8cc864906\gdiplus.dll:gdiplus.dll (00007FFDD2870000), size: 1740800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1288
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FFDF7BB0000), size: 1134592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\SYSTEM32\edputil.dll:edputil.dll (00007FFDD2840000), size: 147456 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.StateRepositoryPS.dll:Windows.StateRepositoryPS.dll (00007FFDDC280000), size: 1335296 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.844
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FFDF49A0000), size: 1982464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.867
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFDF6F04F99 (KERNELBASE) RaiseException
+0x00007FF79FAEFB9D (Unity) EditorMonoConsole::LogToConsoleImplementation
+0x00007FF79FAF0B1A (Unity) EditorMonoConsole::LogToConsoleImplementation
+0x00007FF7A172697E (Unity) DebugStringToFilePostprocessedStacktrace
+0x00007FF7A1725F2F (Unity) DebugStringToFile
+0x00007FF79D5CC7E3 (Unity) CallbackArraySubBase<void (__cdecl*)(MemoryManager::AllocationLogDetails const & __ptr64)>::Register
+0x00007FF7A02EC999 (Unity) LoadDomainAndUserAssemblies
+0x00007FF7A02ECE4E (Unity) LoadUserAssemblies
+0x00007FF7A07638F8 (Unity) <lambda_d5cd3abeeb3ed75489242b6b28c1fa53>::operator()
+0x00007FF7A08078A2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007FF7A0809A00 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007FF7A080D18E (Unity) asio::io_service::run
+0x00007FF7A079002B (Unity) RunAssetImportWorkerClientV2
+0x00007FF7A0790080 (Unity) RunAssetImporterV2
+0x00007FF79FC4B046 (Unity) Application::InitializeProject
+0x00007FF7A05FF212 (Unity) WinMain
+0x00007FF7A245DEF6 (Unity) __scrt_common_main_seh
+0x00007FFDF7957034 (KERNEL32) BaseThreadInitThunk
+0x00007FFDF9662651 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/nikol/AppData/Local/Temp/Unity/Editor/Crashes

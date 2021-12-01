@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	public Vector3 Offset => _offset;
 	public Color Color;
 	public string Name = "Имя не задано";
-	public Vector3 Offset => _offset;
 
 	// TODO: вот бы инкапсулировать через события
 	[HideInInspector] public int CurrentPoint = 0;

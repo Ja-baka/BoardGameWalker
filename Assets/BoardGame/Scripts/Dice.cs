@@ -1,11 +1,11 @@
-using System;
+//using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Dice : MonoBehaviour, IPointerClickHandler
 {
-	[HideInInspector] public EventHandler<DiceEventArgs> Rolled;
+	[HideInInspector] public System.EventHandler<DiceEventArgs> RolledEvent;
 
 	private bool _isActualValue = true;
 	private Rigidbody _rigidbody;
@@ -17,31 +17,77 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 		Rolling();
 	}
 
-	private void Rolling()
-	{
-		if (_rigidbody.IsSleeping() == false)
-		{
-			return;
-		}
+    // DEBUG: чит
+	private void Update()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+			RolledEvent?.Invoke(this, new DiceEventArgs(1));
+        }
+		else if (Input.GetKey(KeyCode.Alpha2))
+        {
+			RolledEvent?.Invoke(this, new DiceEventArgs(2));
+        }
+		else if (Input.GetKey(KeyCode.Alpha3))
+        {
+			RolledEvent?.Invoke(this, new DiceEventArgs(3));
+        }
+		else if (Input.GetKey(KeyCode.Alpha4))
+        {
+			RolledEvent?.Invoke(this, new DiceEventArgs(4));
+        }
+		else if (Input.GetKey(KeyCode.Alpha5))
+        {
+			RolledEvent?.Invoke(this, new DiceEventArgs(5));
+        }
+		else if (Input.GetKey(KeyCode.Alpha6))
+        {
+			RolledEvent?.Invoke(this, new DiceEventArgs(6));
+        }
+    }
+    // DEBUG: чит
 
-		_isActualValue = false;
+    private void Rolling()
+    {
+        if (_rigidbody.IsSleeping() == false)
+        {
+            return;
+        }
 
-		Vector3 randomDirection = GenerateRandomDirection();
-		Vector3 jumpDirection = Vector3.up + (randomDirection / 2);
-		_rigidbody.AddForce
+        _isActualValue = false;
+
+        SetRandomForce();
+        SetRandomRotation();
+    }
+
+    private void SetRandomForce()
+    {
+        Vector3 randomDirection = GenerateRandomDirection();
+        Vector3 jumpDirection = Vector3.up + (randomDirection / 2);
+        _rigidbody.AddForce
+        (
+            jumpDirection * _jumpForce,
+            ForceMode.Impulse
+        );
+    }
+
+    private void SetRandomRotation()
+    {
+		Vector3 randomVector = new Vector3
 		(
-			jumpDirection * _jumpForce, 
-			ForceMode.Impulse
+			Random.Range(-180f, 180f),
+			Random.Range(-180f, 180f),
+			Random.Range(-180f, 180f)
 		);
+        _rigidbody.AddTorque
+		(
+			randomVector.x,
+			randomVector.y,
+			randomVector.z
+		);
+    }
 
-		float randomX = UnityEngine.Random.Range(-180, 180);
-		float randomY = UnityEngine.Random.Range(-180, 180);
-		float randomZ = UnityEngine.Random.Range(-180, 180);
-
-		_rigidbody.AddTorque(randomX, randomY, randomZ);
-	}
-
-	private static Vector3 GenerateRandomDirection()
+    private static Vector3 GenerateRandomDirection()
 	{
 		return UnityEngine.Random.Range(1, 5) switch
 		{
@@ -73,7 +119,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 		{
 			if (side.IsGrounded)
 			{
-				Rolled?.Invoke(this, new DiceEventArgs(side.SideValue));
+				RolledEvent?.Invoke(this, new DiceEventArgs(side.SideValue));
 				_isActualValue = true;
 				return;
 			}
