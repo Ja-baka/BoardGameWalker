@@ -24,7 +24,6 @@ public class Point : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        Debug.Log("a");
         _messagePreview?.gameObject.SetActive(true);
         _messagePreview?.ShowMessage(Message, Background);
     }
