@@ -1,0 +1,2 @@
+C:\soft\UnityHub\Projects\BoarGame draft\obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache
+C:\soft\UnityHub\Projects\BoarGame draft\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

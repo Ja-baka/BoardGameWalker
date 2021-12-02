@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Point : MonoBehaviour
 {
@@ -11,4 +12,25 @@ public class Point : MonoBehaviour
 	[SerializeField] private int _effectValue;
 	[TextArea] [SerializeField] private string _message;
 	[SerializeField] private Sprite _background;
+
+    private MessageMenu _messagePreview;
+
+    private void Awake()
+    {
+        _messagePreview = FindObjectOfType<MessageMenu>();
+    }
+
+    
+
+    private void OnMouseEnter()
+    {
+        Debug.Log("a");
+        _messagePreview?.gameObject.SetActive(true);
+        _messagePreview?.ShowMessage(Message, Background);
+    }
+
+    private void OnMouseExit()
+    {
+        _messagePreview?.gameObject.SetActive(false);
+    }
 }

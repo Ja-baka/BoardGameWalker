@@ -53,23 +53,24 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\BoardGame\Scripts\PlayerEvent.cs" />
     <Compile Include="Assets\BoardGame\Scripts\DiceEventArgs.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Dice.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Player.cs" />
     <Compile Include="Assets\BoardGame\Scripts\MessageMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\DiceSide.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\MainMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Centre.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PointType.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PlayersMover.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Wall.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\DiceSoundBehaviour.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Path.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\PlayerSoundBehaviour.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Ground.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Point.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Background.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\DiceSoundBehaviour.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\PlayerEvent.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\PlayerSoundBehaviour.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\UI\StartGameMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />
