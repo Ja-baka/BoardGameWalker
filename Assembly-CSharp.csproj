@@ -72,6 +72,7 @@
     <Compile Include="Assets\BoardGame\Scripts\Point.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Background.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Pointer.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\UI\DicePointer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />

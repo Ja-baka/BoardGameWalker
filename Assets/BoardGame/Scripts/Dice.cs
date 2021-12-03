@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Dice : MonoBehaviour, IPointerClickHandler
 {
 	[HideInInspector] public System.EventHandler<DiceEventArgs> RolledEvent;
+	[HideInInspector] public System.EventHandler<DiceEventArgs> ThrownEvent;
 
 	private bool _isActualValue = true;
 	private Rigidbody _rigidbody;
@@ -54,7 +55,8 @@ public class Dice : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        _isActualValue = false;
+		ThrownEvent?.Invoke(this, new DiceEventArgs(0));
+		_isActualValue = false;
 
         SetRandomForce();
         SetRandomRotation();
