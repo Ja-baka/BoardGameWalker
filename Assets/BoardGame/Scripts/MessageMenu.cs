@@ -30,5 +30,10 @@ public class MessageMenu : MonoBehaviour
 	{
 		_text.text = message;
         _backgroundImage.sprite = background;
+	} 
+
+    public void ShowMessage(string message)
+	{
+		_text.text = message;
 	}
 }

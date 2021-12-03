@@ -163,8 +163,12 @@ public class PlayersMover : MonoBehaviour
 			player.transform.position = _points[0].transform.position + player.Offset;
 		}
 
-		ExitMenu mainMenu = Resources.FindObjectsOfTypeAll<ExitMenu>()[0];
+		MessageMenu messageMenu
+			= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
+		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
+
 		mainMenu.gameObject.SetActive(true);
+		messageMenu.ShowMessage($"Победил игрок {_activePlayer.Name}");
 	}
 
 	private void SwitchActivePlayer()
