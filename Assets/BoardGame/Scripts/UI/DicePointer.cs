@@ -12,10 +12,14 @@ public class DicePointer : MonoBehaviour
 	private SpriteRenderer _spriteRenderer;
 	private Transform _target;
 
-	private void Start()
+	private void Awake()
 	{
 		_dice = FindObjectOfType<Dice>();
 		_playersMover = Resources.FindObjectsOfTypeAll<PlayersMover>()[0];
+	}
+
+	private void Start()
+	{
 		_animator = GetComponentInChildren<Animator>();
 		_spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 		_target = FindObjectOfType<Dice>().transform;

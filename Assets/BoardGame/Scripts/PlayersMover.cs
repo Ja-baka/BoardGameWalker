@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-// TODO: неявный гейм менеджер. разбить
 public class PlayersMover : MonoBehaviour
 {
 	public System.EventHandler<PlayerEvent> MovedEvent;
@@ -130,7 +129,7 @@ public class PlayersMover : MonoBehaviour
 		if (pointType == EffectType.Normal)
 		{
 			messageMenu.ShowMessage($"Ход игрока {NextPlayer.Name}", currentPoint.Background);
-			SwichActivePlayer();
+			SwitchActivePlayer();
 			return;
 		}
 		else
@@ -148,7 +147,7 @@ public class PlayersMover : MonoBehaviour
 			{
 				Debug.Log("пропуск хода");
 			}
-			SwichActivePlayer();
+			SwitchActivePlayer();
 		}
 		else if (pointType == EffectType.Position)
 		{
@@ -164,11 +163,11 @@ public class PlayersMover : MonoBehaviour
 			player.transform.position = _points[0].transform.position + player.Offset;
 		}
 
-		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
+		ExitMenu mainMenu = Resources.FindObjectsOfTypeAll<ExitMenu>()[0];
 		mainMenu.gameObject.SetActive(true);
 	}
 
-	private void SwichActivePlayer()
+	private void SwitchActivePlayer()
 	{
 		FinishMoveEvent?.Invoke(this, new PlayerEvent());
 		_indexOfActivePlayer = GetNextPlayerIndex();
