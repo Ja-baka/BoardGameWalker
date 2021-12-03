@@ -34,6 +34,7 @@ public class PlayersMover : MonoBehaviour
 		_indexOfActivePlayer = 0;
 		_activePlayer = _players[_indexOfActivePlayer];
 
+		_activePlayer.GetComponent<Outline>().enabled = true;
 		messageMenu.ShowMessage($"Сейчас ходит {_activePlayer.Name}");
 	}
 	private void OnDisable()
@@ -178,9 +179,13 @@ public class PlayersMover : MonoBehaviour
 
 	private void SwitchActivePlayer()
 	{
+		_activePlayer.GetComponent<Outline>().enabled = false;
+
 		FinishMoveEvent?.Invoke(this, new PlayerEvent());
 		_indexOfActivePlayer = GetNextPlayerIndex();
 		_activePlayer = _players[_indexOfActivePlayer];
+
+		_activePlayer.GetComponent<Outline>().enabled = true;
 	}
 
 	private int GetNextPlayerIndex()
