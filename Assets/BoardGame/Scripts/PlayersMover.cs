@@ -129,7 +129,6 @@ public class PlayersMover : MonoBehaviour
 
 		if (pointType == EffectType.Normal)
 		{
-			FinishMoveEvent?.Invoke(this, new PlayerEvent());
 			messageMenu.ShowMessage($"Ход игрока {NextPlayer.Name}", currentPoint.Background);
 			SwichActivePlayer();
 			return;
@@ -171,6 +170,7 @@ public class PlayersMover : MonoBehaviour
 
 	private void SwichActivePlayer()
 	{
+		FinishMoveEvent?.Invoke(this, new PlayerEvent());
 		_indexOfActivePlayer = GetNextPlayerIndex();
 		_activePlayer = _players[_indexOfActivePlayer];
 	}

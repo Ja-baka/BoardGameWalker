@@ -6,53 +6,45 @@ using UnityEngine.UI;
 
 public class DicePointer : MonoBehaviour
 {
-	[SerializeField] private Image _pointerImage;
-	[SerializeField] private Camera _camera;
-	
-	private Transform _target;
-	private Vector2 _position;
-	private Vector3 _tempPosition = new Vector3();
-	private SpriteRenderer _spriteRenderer;
+	private Dice _dice;
+	private PlayersMover _playersMover;
 	private Animator _animator;
+	private SpriteRenderer _spriteRenderer;
+	private Transform _target;
 
 	private void Start()
 	{
+		_dice = FindObjectOfType<Dice>();
+		_playersMover = Resources.FindObjectsOfTypeAll<PlayersMover>()[0];
 		_animator = GetComponentInChildren<Animator>();
 		_spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 		_target = FindObjectOfType<Dice>().transform;
-		_animator.enabled = true;
-		_spriteRenderer.enabled = true;
 	}
 
 	private void OnEnable()
 	{
-        Dice dice = FindObjectOfType<Dice>();
-        dice.ThrownEvent += HidePointer;
-		dice.RolledEvent += ShowPointer;
+		_dice.ThrownEvent += HidePointer;
+		_playersMover.FinishMoveEvent += ShowPointer;
 	}
 	private void OnDisable()
 	{
-        Dice dice = FindObjectOfType<Dice>();
-		if (dice != null)
-        {
-			dice.ThrownEvent -= HidePointer;
-			dice.RolledEvent -= ShowPointer;
-        }
+		if (_dice != null
+			&& _playersMover != null)
+		{
+			_dice.ThrownEvent -= HidePointer;
+			_playersMover.FinishMoveEvent -= ShowPointer;
+		}
 	}
 
-	private void ShowPointer(object sender, DiceEventArgs e)
+	private void ShowPointer(object sender, PlayerEvent e)
 	{
-		Debug.Log("RolledEvent");
 		_animator.enabled = true;
 		_spriteRenderer.enabled = true;
-		//gameObject.SetActive(true);
 	}
 	private void HidePointer(object sender, DiceEventArgs e)
 	{
-		Debug.Log("ThrownEvent");
 		_animator.enabled = false;
 		_spriteRenderer.enabled = false;
-		//gameObject.SetActive(false);
 	}
 
 	private void Update()
