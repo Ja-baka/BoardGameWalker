@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class DicePointer : MonoBehaviour
 {
+	[SerializeField] private Camera _mainCamera;
+
 	private Dice _dice;
 	private PlayersMover _playersMover;
 	private Animator _animator;
@@ -54,5 +56,6 @@ public class DicePointer : MonoBehaviour
 	private void Update()
 	{
 		transform.position = _target.position + Vector3.up;
+		transform.LookAt(_mainCamera.transform);
 	}
 }
