@@ -20,6 +20,10 @@ public class PlayersMover : MonoBehaviour
 
 	private void OnEnable()
 	{
+		MessageMenu messageMenu
+			= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
+		messageMenu.gameObject.SetActive(true);
+
 		Dice dice = FindObjectOfType<Dice>();
 		dice.RolledEvent += StartMoving;
 
@@ -29,8 +33,9 @@ public class PlayersMover : MonoBehaviour
 		_players = FindObjectsOfType<Player>();
 		_indexOfActivePlayer = 0;
 		_activePlayer = _players[_indexOfActivePlayer];
-	}
 
+		messageMenu.ShowMessage($"Сейчас ходит {_activePlayer.Name}");
+	}
 	private void OnDisable()
 	{
 		Dice dice = FindObjectOfType<Dice>();
@@ -128,7 +133,7 @@ public class PlayersMover : MonoBehaviour
 
 		if (pointType == EffectType.Normal)
 		{
-			messageMenu.ShowMessage($"Ход игрока {NextPlayer.Name}", currentPoint.Background);
+			messageMenu.ShowMessage($"Сейчас ходит {NextPlayer.Name}", currentPoint.Background);
 			SwitchActivePlayer();
 			return;
 		}
@@ -168,7 +173,7 @@ public class PlayersMover : MonoBehaviour
 		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
 
 		mainMenu.gameObject.SetActive(true);
-		messageMenu.ShowMessage($"Победил игрок {_activePlayer.Name}");
+		messageMenu.ShowMessage($"Победил {_activePlayer.Name}");
 	}
 
 	private void SwitchActivePlayer()
