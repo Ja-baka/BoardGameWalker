@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayersMover : MonoBehaviour
 {
 	public System.EventHandler<PlayerEvent> MovedEvent;
+	public System.EventHandler<PlayerEvent> FinishMoveEvent;
 	public Player NextPlayer => _players[GetNextPlayerIndex()];
 
 	private Player[] _players;
@@ -128,6 +129,7 @@ public class PlayersMover : MonoBehaviour
 
 		if (pointType == EffectType.Normal)
 		{
+			FinishMoveEvent?.Invoke(this, new PlayerEvent());
 			messageMenu.ShowMessage($"Ход игрока {NextPlayer.Name}", currentPoint.Background);
 			SwichActivePlayer();
 			return;
