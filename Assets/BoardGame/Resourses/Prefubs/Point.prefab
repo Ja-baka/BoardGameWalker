@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4888158444619791569}
   - component: {fileID: 4604466065791593621}
   - component: {fileID: 5110607367414843708}
+  - component: {fileID: -8093743642626724911}
+  - component: {fileID: -1337222560900942206}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -92,8 +94,8 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642615930109831762}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 350.00006
   m_Direction: 1
@@ -114,6 +116,35 @@ MonoBehaviour:
   _effectValue: 0
   _message: 
   _background: {fileID: 0}
+--- !u!135 &-8093743642626724911
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642615930109831762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940696}
+--- !u!54 &-1337222560900942206
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642615930109831762}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &6081906234937294456
 GameObject:
   m_ObjectHideFlags: 0
