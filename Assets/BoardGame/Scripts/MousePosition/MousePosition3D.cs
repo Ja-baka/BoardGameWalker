@@ -26,24 +26,29 @@ public class MousePosition3D : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		print("enter");
 		if (other.TryGetComponent(out Point point) == false
 			|| point.EffectType == EffectType.Normal)
 		{
 			return;
 		}
 
+		_previewMessage.transform.LookAt(_mainCamera.transform);
+
+		Quaternion tempQuaternion = Quaternion.identity;
+		tempQuaternion.x = 0.5f;
+		_previewMessage.transform.rotation = tempQuaternion;
+
 		_previewMessage.gameObject.SetActive(true);
 		var text = _previewMessage.GetComponentInChildren<TextMeshProUGUI>();
 		text.text = point.Message;
-		//_previewMessage.transform.position = Input.mousePosition;
+		//Vector3 tempPosition = Input.mousePosition.normalized;
+		//_previewMessage.transform.position = tempPosition;
 	}
 
 
 
 	private void OnTriggerExit(Collider other)
 	{
-		print("exit");
 		_previewMessage.gameObject.SetActive(false);
 	}
 }
