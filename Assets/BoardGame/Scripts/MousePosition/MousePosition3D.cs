@@ -39,6 +39,10 @@ public class MousePosition3D : MonoBehaviour
 		Vector3 tempPosition = Input.mousePosition;
 		tempPosition.x -= 1000;
 		tempPosition.y -= 500;
+
+		tempPosition.x = Mathf.Clamp(tempPosition.x, -250, 250);
+		tempPosition.y = Mathf.Clamp(tempPosition.y, -250, 250);
+
 		_previewMessage.transform.localPosition = tempPosition;
 	}
 
