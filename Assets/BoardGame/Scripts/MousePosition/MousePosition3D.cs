@@ -22,6 +22,20 @@ public class MousePosition3D : MonoBehaviour
 		{
 			transform.position = raycastHit.point;
 		}
+
+		if (_previewMessage.gameObject.activeInHierarchy == false)
+		{
+			return;
+		}
+
+		Vector3 tempPosition = Input.mousePosition;
+		tempPosition.x -= 1150;
+		tempPosition.y -= 400;
+
+		tempPosition.x = Mathf.Clamp(tempPosition.x, -750, 350);
+		tempPosition.y = Mathf.Clamp(tempPosition.y, -500, 375);
+
+		_previewMessage.transform.localPosition = tempPosition;
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -35,18 +49,7 @@ public class MousePosition3D : MonoBehaviour
 		_previewMessage.gameObject.SetActive(true);
 		TextMeshProUGUI text = _previewMessage.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
 		text.text = point.Message;
-
-		Vector3 tempPosition = Input.mousePosition;
-		tempPosition.x -= 1000;
-		tempPosition.y -= 500;
-
-		tempPosition.x = Mathf.Clamp(tempPosition.x, -250, 250);
-		tempPosition.y = Mathf.Clamp(tempPosition.y, -250, 250);
-
-		_previewMessage.transform.localPosition = tempPosition;
 	}
-
-
 
 	private void OnTriggerExit(Collider other)
 	{
