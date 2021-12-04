@@ -9,10 +9,12 @@ public class MousePosition3D : MonoBehaviour
 	[SerializeField] private LayerMask _layerMask;
 
 	private PreviewMessage _previewMessage;
+	private PreviewPlayerName _previewPlayerName;
 
 	private void Awake()
 	{
 		_previewMessage = Resources.FindObjectsOfTypeAll<PreviewMessage>()[0];
+		_previewPlayerName = Resources.FindObjectsOfTypeAll<PreviewPlayerName>()[0];
 	}
 
 	private void Update()
@@ -23,23 +25,39 @@ public class MousePosition3D : MonoBehaviour
 			transform.position = raycastHit.point;
 		}
 
-		if (_previewMessage.gameObject.activeInHierarchy == false)
+		Vector3 tempPosition = Input.mousePosition;
+
+		if (_previewMessage.gameObject.activeInHierarchy)
 		{
-			return;
+			Vector2Int offset = new Vector2Int(1150, 400);
+			tempPosition.x -= offset.x;
+			tempPosition.y -= offset.y;
+	
+			tempPosition.x = Mathf.Clamp(tempPosition.x, -750, 350);
+			tempPosition.y = Mathf.Clamp(tempPosition.y, -500, 375);
+
+			_previewMessage.transform.localPosition = tempPosition;
+		}
+		else if (_previewPlayerName.gameObject.activeInHierarchy)
+		{
+			Vector2Int offset = new Vector2Int(808, 512);
+			tempPosition.x -= offset.x;
+			tempPosition.y -= offset.y;
+			_previewPlayerName.transform.localPosition = tempPosition;
 		}
 
-		Vector3 tempPosition = Input.mousePosition;
-		tempPosition.x -= 1150;
-		tempPosition.y -= 400;
-
-		tempPosition.x = Mathf.Clamp(tempPosition.x, -750, 350);
-		tempPosition.y = Mathf.Clamp(tempPosition.y, -500, 375);
-
-		_previewMessage.transform.localPosition = tempPosition;
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
+		if (other.TryGetComponent(out Player player))
+		{
+			_previewPlayerName.gameObject.SetActive(true);
+			TextMeshProUGUI playerName = _previewPlayerName.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
+			playerName.text = player.Name;
+			return;
+		}
+		
 		if (other.TryGetComponent(out Point point) == false
 			|| point.EffectType == EffectType.Normal)
 		{
@@ -47,12 +65,13 @@ public class MousePosition3D : MonoBehaviour
 		}
 
 		_previewMessage.gameObject.SetActive(true);
-		TextMeshProUGUI text = _previewMessage.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
-		text.text = point.Message;
+		TextMeshProUGUI message = _previewMessage.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
+		message.text = point.Message;
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
+		_previewPlayerName.gameObject.SetActive(false);
 		_previewMessage.gameObject.SetActive(false);
 	}
 }
