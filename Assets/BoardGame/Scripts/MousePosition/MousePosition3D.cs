@@ -43,9 +43,19 @@ public class MousePosition3D : MonoBehaviour
 			Vector2Int offset = new Vector2Int(808, 512);
 			tempPosition.x -= offset.x;
 			tempPosition.y -= offset.y;
+
+			RectTransform rt = _previewPlayerName.GetComponent<RectTransform>();
+			tempPosition.x = Mathf.Clamp
+			(
+				tempPosition.x, 
+				-1150f - rt.rect.x * 2f,
+				-350f - rt.rect.x * 2f
+			);
+
+			tempPosition.y = Mathf.Clamp(tempPosition.y, -1000, 500);
+
 			_previewPlayerName.transform.localPosition = tempPosition;
 		}
-
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -54,6 +64,15 @@ public class MousePosition3D : MonoBehaviour
 		{
 			_previewPlayerName.gameObject.SetActive(true);
 			TextMeshProUGUI playerName = _previewPlayerName.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
+			
+			RectTransform rt = _previewPlayerName.GetComponent<RectTransform>();
+			//rt.sizeDelta = new Vector2(player.Name.Length * 30, 50);			
+			rt.SetSizeWithCurrentAnchors
+			(
+				RectTransform.Axis.Horizontal, 
+				player.Name.Length * 30
+			);
+
 			playerName.text = player.Name;
 			return;
 		}
