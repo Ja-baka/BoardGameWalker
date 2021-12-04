@@ -26,7 +26,6 @@ public class MousePosition3D : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		print("enter");
 		if (other.TryGetComponent(out Point point) == false
 			|| point.EffectType == EffectType.Normal)
 		{
@@ -34,16 +33,19 @@ public class MousePosition3D : MonoBehaviour
 		}
 
 		_previewMessage.gameObject.SetActive(true);
-		var text = _previewMessage.GetComponentInChildren<TextMeshProUGUI>();
+		TextMeshProUGUI text = _previewMessage.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
 		text.text = point.Message;
-		//_previewMessage.transform.position = Input.mousePosition;
+
+		Vector3 tempPosition = Input.mousePosition;
+		tempPosition.x -= 1000;
+		tempPosition.y -= 500;
+		_previewMessage.transform.localPosition = tempPosition;
 	}
 
 
 
 	private void OnTriggerExit(Collider other)
 	{
-		print("exit");
 		_previewMessage.gameObject.SetActive(false);
 	}
 }
