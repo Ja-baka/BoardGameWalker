@@ -75,8 +75,6 @@
     <Compile Include="Assets\BoardGame\Scripts\Background.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Pointer.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\MousePosition\MousePosition3D.cs" />
-    <Compile Include="Assets\BoardGame\Scripts\UI\PreviewMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />
