@@ -55,6 +55,10 @@
   <ItemGroup>
     <Compile Include="Assets\BoardGame\Scripts\PlayerEvent.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\BoardGame\Scripts\UI\PreviewPlayerName.cs" />
+>>>>>>> dev
     <Compile Include="Assets\BoardGame\Scripts\Player.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Centre.cs" />
     <Compile Include="Assets\BoardGame\Scripts\UI\ExitMenu.cs" />
@@ -69,6 +73,7 @@
     <Compile Include="Assets\BoardGame\Scripts\DiceEventArgs.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Dice.cs" />
     <Compile Include="Assets\BoardGame\Scripts\MessageMenu.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\UI\VariableText.cs" />
     <Compile Include="Assets\BoardGame\Scripts\DiceSide.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PointType.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PlayersMover.cs" />
@@ -77,6 +82,10 @@
     <Compile Include="Assets\BoardGame\Scripts\UI\StartGameMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PlayerSoundBehaviour.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Pointer.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\BoardGame\Scripts\UI\DiceValue.cs" />
+>>>>>>> dev
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -699,6 +708,12 @@
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+>>>>>>> dev
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>

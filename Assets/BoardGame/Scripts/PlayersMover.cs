@@ -161,7 +161,7 @@ public class PlayersMover : MonoBehaviour
 		}
 	}
 
-	private void FinishGame()
+	public void FinishGame()
 	{
 		foreach (Player player in _players)
 		{

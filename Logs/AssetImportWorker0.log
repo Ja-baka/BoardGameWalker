@@ -135,6 +135,7 @@ Received Import Request.
   artifactKey: Guid(097554090487f1042b12a7d472732b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/BoardGame/Resourses/Prefubs/Wall.prefab using Guid(097554090487f1042b12a7d472732b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb01787601fb85d657464d97bc823a1') in 0.263302 seconds 
   Import took 0.268517 seconds .
+<<<<<<< HEAD
 
 ========================================================================
 Received Prepare
@@ -193,3 +194,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+=======
+
+>>>>>>> dev
