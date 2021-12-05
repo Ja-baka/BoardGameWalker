@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637741549973469477
-    m_Hash: 3922234176
+      ticks: 637742885820901916
+    m_Hash: 3421691902
   m_LockFileStatus:
     m_FilePath: C:/soft/UnityHub/Projects/BoarGame draft/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637741549973589297
-    m_Hash: 4070191006
+      ticks: 637742885820921684
+    m_Hash: 130936832
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
