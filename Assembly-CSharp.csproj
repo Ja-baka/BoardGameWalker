@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BDFECD8C-A378-1364-7C81-262E5024D497}</ProjectGuid>
+    <ProjectGuid>{1EA80F1C-77C1-DE49-54DB-8DBB1CB70AE9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,10 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\BoardGame\Scripts\PlayerEvent.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\BoardGame\Scripts\UI\PreviewPlayerName.cs" />
->>>>>>> dev
     <Compile Include="Assets\BoardGame\Scripts\Player.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Centre.cs" />
     <Compile Include="Assets\BoardGame\Scripts\UI\ExitMenu.cs" />
@@ -75,6 +72,7 @@
     <Compile Include="Assets\BoardGame\Scripts\MessageMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\UI\VariableText.cs" />
     <Compile Include="Assets\BoardGame\Scripts\DiceSide.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\UI\DiceValue.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PointType.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PlayersMover.cs" />
     <Compile Include="Assets\BoardGame\Scripts\DiceSoundBehaviour.cs" />
@@ -82,10 +80,6 @@
     <Compile Include="Assets\BoardGame\Scripts\UI\StartGameMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PlayerSoundBehaviour.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Pointer.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="Assets\BoardGame\Scripts\UI\DiceValue.cs" />
->>>>>>> dev
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -708,12 +702,9 @@
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
-<<<<<<< HEAD
-=======
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
->>>>>>> dev
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
