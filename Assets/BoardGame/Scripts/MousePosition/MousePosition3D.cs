@@ -60,15 +60,12 @@ public class MousePosition3D : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-<<<<<<< HEAD
-=======
 		if (other.TryGetComponent(out Player player))
 		{
 			_previewPlayerName.gameObject.SetActive(true);
 			TextMeshProUGUI playerName = _previewPlayerName.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
 			
 			RectTransform rt = _previewPlayerName.GetComponent<RectTransform>();
-			//rt.sizeDelta = new Vector2(player.Name.Length * 30, 50);			
 			rt.SetSizeWithCurrentAnchors
 			(
 				RectTransform.Axis.Horizontal, 
@@ -79,7 +76,6 @@ public class MousePosition3D : MonoBehaviour
 			return;
 		}
 		
->>>>>>> dev
 		if (other.TryGetComponent(out Point point) == false
 			|| point.EffectType == EffectType.Normal)
 		{
@@ -93,23 +89,17 @@ public class MousePosition3D : MonoBehaviour
 		_previewMessage.transform.rotation = tempQuaternion;
 
 		_previewMessage.gameObject.SetActive(true);
-<<<<<<< HEAD
+
 		var text = _previewMessage.GetComponentInChildren<TextMeshProUGUI>();
 		text.text = point.Message;
-		//Vector3 tempPosition = Input.mousePosition.normalized;
-		//_previewMessage.transform.position = tempPosition;
-=======
+
 		TextMeshProUGUI message = _previewMessage.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
 		message.text = point.Message;
->>>>>>> dev
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-<<<<<<< HEAD
-=======
 		_previewPlayerName.gameObject.SetActive(false);
->>>>>>> dev
 		_previewMessage.gameObject.SetActive(false);
 	}
 }
