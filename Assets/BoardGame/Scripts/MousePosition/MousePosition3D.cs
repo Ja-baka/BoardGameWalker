@@ -8,54 +8,69 @@ public class MousePosition3D : MonoBehaviour
 	[SerializeField] private Camera _mainCamera;
 	[SerializeField] private LayerMask _layerMask;
 
-	private PreviewMessage _message;
+	private PreviewMessage _pointMessage;
 	private PreviewPlayerName _playerName;
 
 	private void Awake()
 	{
-		_message = Resources.FindObjectsOfTypeAll<PreviewMessage>()[0];
+		_pointMessage = Resources.FindObjectsOfTypeAll<PreviewMessage>()[0];
 		_playerName = Resources.FindObjectsOfTypeAll<PreviewPlayerName>()[0];
 	}
 
 	private void Update()
 	{
 		Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-		if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, _layerMask))
+		if (Physics.Raycast(ray, out RaycastHit raycastHit, 10f, _layerMask))
 		{
 			transform.position = raycastHit.point;
 		}
 
-		Vector3 tempPosition = Input.mousePosition;
-
-		if (_message.gameObject.activeInHierarchy)
+		if (_pointMessage.gameObject.activeInHierarchy)
 		{
-			Vector2Int offset = new Vector2Int(1150, 400);
-			tempPosition.x -= offset.x;
-			tempPosition.y -= offset.y;
-	
-			tempPosition.x = Mathf.Clamp(tempPosition.x, -750, 350);
-			tempPosition.y = Mathf.Clamp(tempPosition.y, -500, 375);
-
-			_message.transform.localPosition = tempPosition;
+			MovePointMessage();
 		}
 		else if (_playerName.gameObject.activeInHierarchy)
 		{
-			Vector2Int offset = new Vector2Int(808, 512);
-			tempPosition.x -= offset.x;
-			tempPosition.y -= offset.y;
-
-			RectTransform rt = _playerName.GetComponent<RectTransform>();
-			tempPosition.x = Mathf.Clamp
-			(
-				tempPosition.x, 
-				-1150f - rt.rect.x * 2f,
-				-350f - rt.rect.x * 2f
-			);
-
-			tempPosition.y = Mathf.Clamp(tempPosition.y, -1000, 500);
-
-			_playerName.transform.localPosition = tempPosition;
+			MovePlayerName();
 		}
+	}
+
+	private void MovePlayerName()
+	{
+		Vector3 tempPosition = Input.mousePosition;
+		int scaleX = Screen.width / 1920;
+		int scaleY = Screen.height / 1080;
+		Vector2Int offset = new Vector2Int(scaleX * 808, scaleY * 512);
+		tempPosition.x -= offset.x;
+		tempPosition.y -= offset.y;
+
+		RectTransform rectTransform = _playerName
+			.GetComponent<RectTransform>();
+		tempPosition.x = Mathf.Clamp
+		(
+			tempPosition.x,
+			scaleX * -1150f - rectTransform.rect.x * 2f,
+			scaleY * -350f - rectTransform.rect.x * 2f
+		);
+
+		tempPosition.y = Mathf.Clamp(tempPosition.y, scaleX * -1000, scaleY * 500);
+
+		_playerName.transform.localPosition = tempPosition;
+	}
+
+	private void MovePointMessage()
+	{
+		int scaleX = Screen.width / 1920;
+		int scaleY = Screen.height / 1080;
+		Vector3 tempPosition = Input.mousePosition;
+		Vector2Int offset = new Vector2Int(scaleX * 1150, scaleY * 400);
+		tempPosition.x -= offset.x;
+		tempPosition.y -= offset.y;
+
+		tempPosition.x = Mathf.Clamp(tempPosition.x, scaleX * -750, scaleY * 350);
+		tempPosition.y = Mathf.Clamp(tempPosition.y, scaleX * -500, scaleY * 375);
+
+		_pointMessage.transform.localPosition = tempPosition;
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -73,9 +88,9 @@ public class MousePosition3D : MonoBehaviour
 
 	private void PreviewPointMessage(Point point)
 	{
-		_message.gameObject.SetActive(true);
+		_pointMessage.gameObject.SetActive(true);
 
-		TextMeshProUGUI message = _message
+		TextMeshProUGUI message = _pointMessage
 			.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
 		message.text = point.Message;
 	}
@@ -99,6 +114,6 @@ public class MousePosition3D : MonoBehaviour
 	private void OnTriggerExit(Collider other)
 	{
 		_playerName.gameObject.SetActive(false);
-		_message.gameObject.SetActive(false);
+		_pointMessage.gameObject.SetActive(false);
 	}
 }
