@@ -4313,7 +4313,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.042500004, y: 0.049465608}
-  m_AnchorMax: {x: 0.95250005, y: 0.7453069}
+  m_AnchorMax: {x: 0.9654168, y: 0.92737556}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4366,7 +4366,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.8
+  m_fontSize: 40.4
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4374,7 +4374,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -7548,7 +7548,7 @@ PrefabInstance:
       objectReference: {fileID: 2331820}
     - target: {fileID: 5110607367414843708, guid: 39d2adebc97701249921defbb7dd8662, type: 3}
       propertyPath: _message
-      value: "\u0412\u0435\u0440\u043D\u0438\u0441\u044C \u043D\u0430 2 \u0448\u0430\u0433\u0430
+      value: "\u0412\u0435\u0440\u043D\u0438\u0441\u044C \u043D\u0430 2 \n\u0448\u0430\u0433\u0430
         \u043D\u0430\u0437\u0430\u0434 -\n\u0442\u044B \u043D\u0435 \u0432\u044B\u043A\u043B\u044E\u0447\u0438\u043B\n\u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440"
       objectReference: {fileID: 0}
     - target: {fileID: 5110607367414843708, guid: 39d2adebc97701249921defbb7dd8662, type: 3}
