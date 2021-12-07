@@ -1646,8 +1646,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5110607367414843708, guid: 39d2adebc97701249921defbb7dd8662, type: 3}
       propertyPath: _message
-      value: "\u0418\u0434\u0438 \u043D\u0430 4 - \u0434\u043E\u043C\n\u0445\u043E\u0440\u043E\u0448\u043E
-        \u0443\u0442\u0435\u043F\u043B\u0435\u043D"
+      value: "\u0421\u0434\u0435\u043B\u0430\u0439 \u0435\u0449\u0451 1 \u0445\u043E\u0434
+        - \u0434\u043E\u043C\n\u0445\u043E\u0440\u043E\u0448\u043E \u0443\u0442\u0435\u043F\u043B\u0435\u043D"
       objectReference: {fileID: 0}
     - target: {fileID: 5110607367414843708, guid: 39d2adebc97701249921defbb7dd8662, type: 3}
       propertyPath: _background
@@ -1655,11 +1655,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 232b6d9f49e4f514b839e4a30daaec73, type: 3}
     - target: {fileID: 5110607367414843708, guid: 39d2adebc97701249921defbb7dd8662, type: 3}
       propertyPath: _effectType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5110607367414843708, guid: 39d2adebc97701249921defbb7dd8662, type: 3}
       propertyPath: _effectValue
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8878459638841731398, guid: 39d2adebc97701249921defbb7dd8662, type: 3}
       propertyPath: m_RootOrder

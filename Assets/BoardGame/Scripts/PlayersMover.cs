@@ -106,7 +106,6 @@ public class PlayersMover : MonoBehaviour
 			_activePlayer.CurrentPoint--;
 		}
 
-		// TODO: при этих условиях выходить из цикла
 		if (_activePlayer.CurrentPoint == _points.Length - 1)
 		{
 			FinishMove();
@@ -147,11 +146,12 @@ public class PlayersMover : MonoBehaviour
 		{
 			if (currentPoint.EffectValue == 1)
 			{
-				Debug.Log("дополнительный ход");
+				messageMenu.ShowMessage($"{_activePlayer.Name} ходит ещё раз!");
+				return;
 			}
 			else
 			{
-				Debug.Log("пропуск хода");
+
 			}
 			SwitchActivePlayer();
 		}
