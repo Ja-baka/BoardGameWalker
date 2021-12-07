@@ -80,6 +80,7 @@
     <Compile Include="Assets\BoardGame\Scripts\UI\StartGameMenu.cs" />
     <Compile Include="Assets\BoardGame\Scripts\PlayerSoundBehaviour.cs" />
     <Compile Include="Assets\BoardGame\Scripts\Pointer.cs" />
+    <Compile Include="Assets\BoardGame\Scripts\UI\CameraConstWidth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardGame\UI\MainMenu\Resourses\TextMesh Pro\Shaders\TMPro.cginc" />

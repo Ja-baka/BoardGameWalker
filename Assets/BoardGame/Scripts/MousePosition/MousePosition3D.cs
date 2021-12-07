@@ -8,13 +8,13 @@ public class MousePosition3D : MonoBehaviour
 	[SerializeField] private Camera _mainCamera;
 	[SerializeField] private LayerMask _layerMask;
 
-	private PreviewMessage _previewMessage;
-	private PreviewPlayerName _previewPlayerName;
+	private PreviewMessage _message;
+	private PreviewPlayerName _playerName;
 
 	private void Awake()
 	{
-		_previewMessage = Resources.FindObjectsOfTypeAll<PreviewMessage>()[0];
-		_previewPlayerName = Resources.FindObjectsOfTypeAll<PreviewPlayerName>()[0];
+		_message = Resources.FindObjectsOfTypeAll<PreviewMessage>()[0];
+		_playerName = Resources.FindObjectsOfTypeAll<PreviewPlayerName>()[0];
 	}
 
 	private void Update()
@@ -27,7 +27,7 @@ public class MousePosition3D : MonoBehaviour
 
 		Vector3 tempPosition = Input.mousePosition;
 
-		if (_previewMessage.gameObject.activeInHierarchy)
+		if (_message.gameObject.activeInHierarchy)
 		{
 			Vector2Int offset = new Vector2Int(1150, 400);
 			tempPosition.x -= offset.x;
@@ -36,15 +36,15 @@ public class MousePosition3D : MonoBehaviour
 			tempPosition.x = Mathf.Clamp(tempPosition.x, -750, 350);
 			tempPosition.y = Mathf.Clamp(tempPosition.y, -500, 375);
 
-			_previewMessage.transform.localPosition = tempPosition;
+			_message.transform.localPosition = tempPosition;
 		}
-		else if (_previewPlayerName.gameObject.activeInHierarchy)
+		else if (_playerName.gameObject.activeInHierarchy)
 		{
 			Vector2Int offset = new Vector2Int(808, 512);
 			tempPosition.x -= offset.x;
 			tempPosition.y -= offset.y;
 
-			RectTransform rt = _previewPlayerName.GetComponent<RectTransform>();
+			RectTransform rt = _playerName.GetComponent<RectTransform>();
 			tempPosition.x = Mathf.Clamp
 			(
 				tempPosition.x, 
@@ -54,52 +54,51 @@ public class MousePosition3D : MonoBehaviour
 
 			tempPosition.y = Mathf.Clamp(tempPosition.y, -1000, 500);
 
-			_previewPlayerName.transform.localPosition = tempPosition;
+			_playerName.transform.localPosition = tempPosition;
 		}
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.TryGetComponent(out Player player))
+		if (other.TryGetComponent(out Point point)
+			&& point.EffectType != EffectType.Normal)
 		{
-			_previewPlayerName.gameObject.SetActive(true);
-			TextMeshProUGUI playerName = _previewPlayerName.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
-			
-			RectTransform rt = _previewPlayerName.GetComponent<RectTransform>();
-			rt.SetSizeWithCurrentAnchors
-			(
-				RectTransform.Axis.Horizontal, 
-				player.Name.Length * 30
-			);
-
-			playerName.text = player.Name;
-			return;
+			PreviewPointMessage(point);
 		}
-		
-		if (other.TryGetComponent(out Point point) == false
-			|| point.EffectType == EffectType.Normal)
+		else if (other.TryGetComponent(out Player player))
 		{
-			return;
+			PreviewPlayerName(player);
 		}
+	}
 
-		_previewMessage.transform.LookAt(_mainCamera.transform);
+	private void PreviewPointMessage(Point point)
+	{
+		_message.gameObject.SetActive(true);
 
-		Quaternion tempQuaternion = Quaternion.identity;
-		tempQuaternion.x = 0.5f;
-		_previewMessage.transform.rotation = tempQuaternion;
-
-		_previewMessage.gameObject.SetActive(true);
-
-		var text = _previewMessage.GetComponentInChildren<TextMeshProUGUI>();
-		text.text = point.Message;
-
-		TextMeshProUGUI message = _previewMessage.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
+		TextMeshProUGUI message = _message
+			.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
 		message.text = point.Message;
+	}
+
+	private void PreviewPlayerName(Player player)
+	{
+		_playerName.gameObject.SetActive(true);
+		TextMeshProUGUI playerName = _playerName
+			.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
+
+		RectTransform rt = _playerName.GetComponent<RectTransform>();
+		rt.SetSizeWithCurrentAnchors
+		(
+			RectTransform.Axis.Horizontal,
+			player.Name.Length * 30
+		);
+
+		playerName.text = player.Name;
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		_previewPlayerName.gameObject.SetActive(false);
-		_previewMessage.gameObject.SetActive(false);
+		_playerName.gameObject.SetActive(false);
+		_message.gameObject.SetActive(false);
 	}
 }
