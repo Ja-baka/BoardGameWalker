@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Point : MonoBehaviour
 {
@@ -19,8 +18,6 @@ public class Point : MonoBehaviour
     {
         _messagePreview = FindObjectOfType<MessageMenu>();
     }
-
-    
 
     private void OnMouseEnter()
     {

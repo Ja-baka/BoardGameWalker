@@ -1,4 +1,3 @@
-//using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -17,36 +16,6 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 	{
 		Rolling();
 	}
-
-    // DEBUG: чит
-	private void Update()
-    {
-        if (Input.GetKey(KeyCode.Alpha1))
-        {
-			RolledEvent?.Invoke(this, new DiceEventArgs(1));
-        }
-		else if (Input.GetKey(KeyCode.Alpha2))
-        {
-			RolledEvent?.Invoke(this, new DiceEventArgs(2));
-        }
-		else if (Input.GetKey(KeyCode.Alpha3))
-        {
-			RolledEvent?.Invoke(this, new DiceEventArgs(3));
-        }
-		else if (Input.GetKey(KeyCode.Alpha4))
-        {
-			RolledEvent?.Invoke(this, new DiceEventArgs(4));
-        }
-		else if (Input.GetKey(KeyCode.Alpha5))
-        {
-			RolledEvent?.Invoke(this, new DiceEventArgs(5));
-        }
-		else if (Input.GetKey(KeyCode.Alpha6))
-        {
-			RolledEvent?.Invoke(this, new DiceEventArgs(6));
-        }
-    }
-    // DEBUG: чит
 
     private void Rolling()
     {

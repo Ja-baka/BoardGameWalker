@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 	public string Name = "Имя не задано";
 	public int MovesCount = 1;
 
-	// TODO: вот бы инкапсулировать через события
 	[HideInInspector] public int CurrentPoint = 0;
 
 	private Vector3 _offset;

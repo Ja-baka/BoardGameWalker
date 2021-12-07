@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
@@ -25,7 +24,6 @@ public class MessageMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    // PointEventArgs
     public void ShowMessage(string message, Sprite background)
 	{
 		_text.text = message;
