@@ -84,7 +84,7 @@ public class PlayersMover : MonoBehaviour
 
 	private IEnumerator SwitchToNextPoint()
 	{
-		if (_activePlayer.transform.position 
+		if (_activePlayer.transform.position
 			!= _targetPoint + _activePlayer.Offset)
 		{
 			yield break;
@@ -92,7 +92,7 @@ public class PlayersMover : MonoBehaviour
 
 		MovedEvent?.Invoke(this, new PlayerEvent());
 		yield return _waitforMiliSecond;
-		bool isFrontMove = _indexOfTargetPoint 
+		bool isFrontMove = _indexOfTargetPoint
 			> _activePlayer.CurrentPoint;
 
 		if (isFrontMove)
@@ -126,8 +126,8 @@ public class PlayersMover : MonoBehaviour
 
 		Point currentPoint = _points[_activePlayer.CurrentPoint];
 		EffectType pointType = currentPoint.EffectType;
-		
-		MessageMenu messageMenu 
+
+		MessageMenu messageMenu
 			= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
 		messageMenu.gameObject.SetActive(true);
 
@@ -138,7 +138,7 @@ public class PlayersMover : MonoBehaviour
 			return;
 		}
 		else
-		{ 
+		{
 			messageMenu.ShowMessage(currentPoint.Message, currentPoint.Background);
 		}
 
@@ -146,13 +146,10 @@ public class PlayersMover : MonoBehaviour
 		{
 			if (currentPoint.EffectValue == 1)
 			{
-				messageMenu.ShowMessage($"{_activePlayer.Name} ходит ещё раз!");
+				messageMenu.ShowMessage(currentPoint.Message);
 				return;
 			}
-			else
-			{
 
-			}
 			SwitchActivePlayer();
 		}
 		else if (pointType == EffectType.Position)
