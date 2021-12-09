@@ -6,7 +6,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 {
 	[HideInInspector] public System.EventHandler<DiceEventArgs> RolledEvent;
 	[HideInInspector] public System.EventHandler<DiceEventArgs> ThrownEvent;
-
+	
 	private bool _isActualValue = true;
 	private Rigidbody _rigidbody;
 

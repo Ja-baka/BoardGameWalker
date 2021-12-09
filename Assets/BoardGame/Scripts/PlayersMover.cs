@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class PlayersMover : MonoBehaviour
 	private Player _activePlayer;
 	private Point[] _points;
 	private Coroutine _movingCoroutine = null;
+	private Coroutine _outlineCoroutine = null;
 	private Vector3 _targetPoint;
 	private int _indexOfTargetPoint = 0;
 	private int _endPointIndex;
@@ -35,6 +37,7 @@ public class PlayersMover : MonoBehaviour
 		_activePlayer = _players[_indexOfActivePlayer];
 
 		_activePlayer.GetComponent<Outline>().enabled = true;
+		_outlineCoroutine ??= StartCoroutine(OutlineBlinkingCoroutine());
 		messageMenu.ShowMessage($"Сейчас ходит {_activePlayer.Name}");
 	}
 	private void OnDisable()
@@ -147,6 +150,7 @@ public class PlayersMover : MonoBehaviour
 			if (currentPoint.EffectValue == 1)
 			{
 				messageMenu.ShowMessage(currentPoint.Message);
+				FinishMoveEvent?.Invoke(this, new PlayerEvent());
 				return;
 			}
 
@@ -176,6 +180,11 @@ public class PlayersMover : MonoBehaviour
 
 	private void SwitchActivePlayer()
 	{
+		if (_outlineCoroutine != null)
+		{
+			StopCoroutine(_outlineCoroutine);
+			_outlineCoroutine = null;
+		}
 		_activePlayer.GetComponent<Outline>().enabled = false;
 
 		FinishMoveEvent?.Invoke(this, new PlayerEvent());
@@ -183,6 +192,40 @@ public class PlayersMover : MonoBehaviour
 		_activePlayer = _players[_indexOfActivePlayer];
 
 		_activePlayer.GetComponent<Outline>().enabled = true;
+		_outlineCoroutine ??= StartCoroutine(OutlineBlinkingCoroutine());
+	}
+
+	private IEnumerator OutlineBlinkingCoroutine()
+	{
+		const float MaxWidth = 13f;
+		const float MinWidth = 0f;
+		const float Step = 1f;
+		Outline outline = _activePlayer.GetComponent<Outline>();
+		outline.OutlineWidth = MinWidth;
+
+		while (true)
+		{
+			if (Mathf.Approximately(outline.OutlineWidth, MinWidth))
+			{
+				while (outline.OutlineWidth < MaxWidth)
+				{
+					outline.OutlineWidth += Step;
+					yield return new WaitForFixedUpdate();
+				}
+			}
+			else if(Mathf.Approximately(outline.OutlineWidth, MaxWidth))
+			{
+				while (outline.OutlineWidth > MinWidth)
+				{
+					outline.OutlineWidth -= Step;
+					yield return new WaitForFixedUpdate();
+				}
+			}
+			else
+			{
+				throw new Exception("InvalidValue");
+			}
+		}
 	}
 
 	private int GetNextPlayerIndex()
