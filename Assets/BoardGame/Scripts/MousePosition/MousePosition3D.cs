@@ -6,8 +6,6 @@ public class MousePosition3D : MonoBehaviour
 	[SerializeField] private Camera _mainCamera;
 	[SerializeField] private LayerMask _layerMask;
 
-	[SerializeField] private Vector2 _playerNameOffset;
-
 	private PreviewMessage _pointMessage;
 	private PreviewPlayerName _playerName;
 
@@ -44,21 +42,14 @@ public class MousePosition3D : MonoBehaviour
 		tempPosition.x -= offset.x;
 		tempPosition.y -= offset.y;
 
-		//RectTransform rectTransform = _playerName
-		//	.GetComponent<RectTransform>();
-		//tempPosition.x = Mathf.Clamp
-		//(
-		//	tempPosition.x,
-		//	scaleX * -1150f - rectTransform.rect.x * 2f,
-		//	scaleY * -350f - rectTransform.rect.x * 2f
-		//);
-
-		//tempPosition.y = Mathf.Clamp
-		//(
-		//	tempPosition.y,
-		//	scaleX * -1000f,
-		//	scaleY * 500f
-		//);
+		RectTransform rectTransform = _playerName
+			.GetComponent<RectTransform>();
+		tempPosition.x = Mathf.Clamp
+		(
+			tempPosition.x,
+			scaleX * -1150f - rectTransform.rect.x * 1.5f,
+			scaleY * -350f - rectTransform.rect.x  * 1.5f
+		);
 
 		_playerName.transform.localPosition = tempPosition;
 	}
