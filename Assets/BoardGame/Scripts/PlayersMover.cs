@@ -34,8 +34,6 @@ public class PlayersMover : MonoBehaviour
 		Dice dice = FindObjectOfType<Dice>();
 		dice.RolledEvent += StartMoving;
 
-		Debug.Log(dice.RolledEvent.GetInvocationList());
-
 		Transform path = FindObjectOfType<Path>().transform;
 		_points = path.GetComponentsInChildren<Point>();
 
@@ -119,7 +117,6 @@ public class PlayersMover : MonoBehaviour
 
 		if (_activePlayer.CurrentPoint == _points.Length - 1)
 		{
-			//FinishMove();
 			FinishGame(isVictory: true);
 			yield break;
 		}

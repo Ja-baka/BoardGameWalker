@@ -6,6 +6,8 @@ public class MousePosition3D : MonoBehaviour
 	[SerializeField] private Camera _mainCamera;
 	[SerializeField] private LayerMask _layerMask;
 
+	[SerializeField] private Vector2 _playerNameOffset;
+
 	private PreviewMessage _pointMessage;
 	private PreviewPlayerName _playerName;
 
@@ -35,28 +37,28 @@ public class MousePosition3D : MonoBehaviour
 
 	private void MovePlayerName()
 	{
+		float scaleX = Screen.width / 1920f;
+		float scaleY = Screen.height / 1080f;
 		Vector3 tempPosition = Input.mousePosition;
-		float scaleX = Screen.width / 1920;
-		float scaleY = Screen.height / 1080;
-		Vector2 offset = new Vector2(scaleX * 808f, scaleY * 512f);
+		Vector2 offset = new Vector2(scaleX * 1075f, scaleY * 520f);
 		tempPosition.x -= offset.x;
 		tempPosition.y -= offset.y;
 
-		RectTransform rectTransform = _playerName
-			.GetComponent<RectTransform>();
-		tempPosition.x = Mathf.Clamp
-		(
-			tempPosition.x,
-			scaleX * -1150f - rectTransform.rect.x * 2f,
-			scaleY * -350f - rectTransform.rect.x * 2f
-		);
+		//RectTransform rectTransform = _playerName
+		//	.GetComponent<RectTransform>();
+		//tempPosition.x = Mathf.Clamp
+		//(
+		//	tempPosition.x,
+		//	scaleX * -1150f - rectTransform.rect.x * 2f,
+		//	scaleY * -350f - rectTransform.rect.x * 2f
+		//);
 
-		tempPosition.y = Mathf.Clamp
-		(
-			tempPosition.y,
-			scaleX * -1000f,
-			scaleY * 500f
-		);
+		//tempPosition.y = Mathf.Clamp
+		//(
+		//	tempPosition.y,
+		//	scaleX * -1000f,
+		//	scaleY * 500f
+		//);
 
 		_playerName.transform.localPosition = tempPosition;
 	}
