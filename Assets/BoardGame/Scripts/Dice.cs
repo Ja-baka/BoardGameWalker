@@ -17,7 +17,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 		Rolling();
 	}
 
-    private void Rolling()
+	private void Rolling()
     {
         if (_rigidbody.IsSleeping() == false)
         {
@@ -60,7 +60,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 
     private static Vector3 GenerateRandomDirection()
 	{
-		return UnityEngine.Random.Range(1, 5) switch
+		return Random.Range(1, 5) switch
 		{
 			1 => Vector3.forward,
 			2 => Vector3.back,
@@ -75,7 +75,44 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 		_rigidbody = GetComponent<Rigidbody>();
 	}
 
-    private void FixedUpdate()
+	private void Update()
+	{
+		if (FindObjectOfType<PlayersMover>() != null
+			&& (Input.GetKeyDown(KeyCode.KeypadEnter)
+			|| Input.GetKeyDown(KeyCode.Space)))
+		{
+			Rolling();
+		}
+
+#if DEBUG
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+		{
+			RolledEvent?.Invoke(this, new DiceEventArgs(1));
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha2))
+		{
+			RolledEvent?.Invoke(this, new DiceEventArgs(2));
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha3))
+		{
+			RolledEvent?.Invoke(this, new DiceEventArgs(3));
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha4))
+		{
+			RolledEvent?.Invoke(this, new DiceEventArgs(4));
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha5))
+		{
+			RolledEvent?.Invoke(this, new DiceEventArgs(5));
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha6))
+		{
+			RolledEvent?.Invoke(this, new DiceEventArgs(6));
+		}
+#endif
+	}
+
+	private void FixedUpdate()
     {
         if (_rigidbody.IsSleeping() == true
 			&& _isActualValue == false)

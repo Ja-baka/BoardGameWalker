@@ -56,6 +56,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.ForwardRendererData
     - UnityEngine.Rendering.Universal.PostProcessData
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+    - UnityEngine.Rendering.Universal.UniversalAdditionalLightData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
     - UnityEngine.Rendering.Universal.XRSystemData
     Unity.Rider.Editor.dll:
@@ -136,13 +137,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1606}
-    - Class: 114
       Script: {instanceID: 1608}
     - Class: 114
       Script: {instanceID: 1610}
     - Class: 114
       Script: {instanceID: 1612}
+    - Class: 114
+      Script: {instanceID: 1614}
     - Class: 114
       Script: {instanceID: 1622}
     - Class: 114
@@ -271,6 +272,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6058}
     - Class: 114
       Script: {instanceID: 6262}
+    - Class: 114
+      Script: {instanceID: 6390}
     - Class: 114
       Script: {instanceID: 6434}
     - Class: 114
@@ -1271,5 +1274,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/BoardGame/Scenes/Game.unity
-  playerPath: "C:/Users/nikol/Desktop/\u0438\u0433\u0440\u0430/\u042D\u043D\u0435\u0440\u0433\u043E\u043C\u0430\u0440\u0430\u0444\u043E\u043D
+  playerPath: "C:/Users/nikol/Desktop/\u042D\u043D\u0435\u0440\u0433\u043E\u043C\u0430\u0440\u0430\u0444\u043E\u043D/64/\u042D\u043D\u0435\u0440\u0433\u043E\u043C\u0430\u0440\u0430\u0444\u043E\u043D
     \u041D\u0430\u0441\u0442\u043E\u043B\u044C\u043D\u0430\u044F \u0438\u0433\u0440\u0430.exe"

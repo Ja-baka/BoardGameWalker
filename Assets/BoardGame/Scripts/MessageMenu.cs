@@ -27,7 +27,7 @@ public class MessageMenu : MonoBehaviour
     public void ShowMessage(string message, Sprite background)
 	{
 		_text.text = message;
-        _backgroundImage.sprite = background;
+		_backgroundImage.sprite = background;
 	} 
 
     public void ShowMessage(string message)

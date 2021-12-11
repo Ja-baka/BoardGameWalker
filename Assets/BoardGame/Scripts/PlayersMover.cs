@@ -18,9 +18,14 @@ public class PlayersMover : MonoBehaviour
 	private int _endPointIndex;
 	private int _indexOfActivePlayer;
 	private const float _speed = 5f;
-	private readonly WaitForSeconds _waitforMiliSecond = new WaitForSeconds(0.1f);
+	private readonly WaitForSeconds _waitforMiliSecond = new WaitForSeconds(0.3f);
 
 	private void OnEnable()
+	{
+		Initialization();
+	}
+
+	public void Initialization()
 	{
 		MessageMenu messageMenu
 			= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
@@ -28,6 +33,8 @@ public class PlayersMover : MonoBehaviour
 
 		Dice dice = FindObjectOfType<Dice>();
 		dice.RolledEvent += StartMoving;
+
+		Debug.Log(dice.RolledEvent.GetInvocationList());
 
 		Transform path = FindObjectOfType<Path>().transform;
 		_points = path.GetComponentsInChildren<Point>();
@@ -40,6 +47,7 @@ public class PlayersMover : MonoBehaviour
 		_outlineCoroutine ??= StartCoroutine(OutlineBlinkingCoroutine());
 		messageMenu.ShowMessage($"Сейчас ходит {_activePlayer.Name}");
 	}
+
 	private void OnDisable()
 	{
 		Dice dice = FindObjectOfType<Dice>();
@@ -111,8 +119,8 @@ public class PlayersMover : MonoBehaviour
 
 		if (_activePlayer.CurrentPoint == _points.Length - 1)
 		{
-			FinishMove();
-			FinishGame();
+			//FinishMove();
+			FinishGame(isVictory: true);
 			yield break;
 		}
 
@@ -162,20 +170,37 @@ public class PlayersMover : MonoBehaviour
 		}
 	}
 
-	public void FinishGame()
+	public void FinishGame(bool isVictory)
 	{
+		StopCoroutine(_outlineCoroutine);
+		_outlineCoroutine = null;
+
 		foreach (Player player in _players)
 		{
 			player.gameObject.SetActive(false);
-			player.transform.position = _points[0].transform.position + player.Offset;
+			player.transform.position 
+				= _points[0].transform.position + player.Offset;
 		}
 
-		MessageMenu messageMenu
-			= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
 		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
 
+		if (isVictory == true)
+		{
+			MessageMenu messageMenu
+				= Resources.FindObjectsOfTypeAll<MessageMenu>()[0];
+			VictorySound victorySoundHolder = FindObjectOfType<VictorySound>();
+			AudioSource victorySound = victorySoundHolder.GetComponent<AudioSource>();
+
+			messageMenu.gameObject.SetActive(true);
+			victorySound.Play();
+			messageMenu.ShowMessage($"Победил {_activePlayer.Name}"); 
+		}
+
 		mainMenu.gameObject.SetActive(true);
-		messageMenu.ShowMessage($"Победил {_activePlayer.Name}");
+
+		_activePlayer.GetComponent<Outline>().enabled = false;
+
+		gameObject.SetActive(false);
 	}
 
 	private void SwitchActivePlayer()

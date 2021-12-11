@@ -36,9 +36,9 @@ public class MousePosition3D : MonoBehaviour
 	private void MovePlayerName()
 	{
 		Vector3 tempPosition = Input.mousePosition;
-		int scaleX = Screen.width / 1920;
-		int scaleY = Screen.height / 1080;
-		Vector2Int offset = new Vector2Int(scaleX * 808, scaleY * 512);
+		float scaleX = Screen.width / 1920;
+		float scaleY = Screen.height / 1080;
+		Vector2 offset = new Vector2(scaleX * 808f, scaleY * 512f);
 		tempPosition.x -= offset.x;
 		tempPosition.y -= offset.y;
 
@@ -51,22 +51,37 @@ public class MousePosition3D : MonoBehaviour
 			scaleY * -350f - rectTransform.rect.x * 2f
 		);
 
-		tempPosition.y = Mathf.Clamp(tempPosition.y, scaleX * -1000, scaleY * 500);
+		tempPosition.y = Mathf.Clamp
+		(
+			tempPosition.y,
+			scaleX * -1000f,
+			scaleY * 500f
+		);
 
 		_playerName.transform.localPosition = tempPosition;
 	}
 
 	private void MovePointMessage()
 	{
-		int scaleX = Screen.width / 1920;
-		int scaleY = Screen.height / 1080;
+		float scaleX = Screen.width / 1920f;
+		float scaleY = Screen.height / 1080f;
 		Vector3 tempPosition = Input.mousePosition;
-		Vector2Int offset = new Vector2Int(scaleX * 1150, scaleY * 400);
+		Vector2 offset = new Vector2(scaleX * 1150f, scaleY * 400f);
 		tempPosition.x -= offset.x;
 		tempPosition.y -= offset.y;
 
-		tempPosition.x = Mathf.Clamp(tempPosition.x, scaleX * -750, scaleY * 350);
-		tempPosition.y = Mathf.Clamp(tempPosition.y, scaleX * -500, scaleY * 375);
+		tempPosition.x = Mathf.Clamp
+		(
+			tempPosition.x,
+			scaleX * -750f,
+			scaleY * 350f
+		);
+		tempPosition.y = Mathf.Clamp
+		(
+			tempPosition.y,
+			scaleX * -500f,
+			scaleY * 375f
+		);
 
 		_pointMessage.transform.localPosition = tempPosition;
 	}
@@ -98,12 +113,14 @@ public class MousePosition3D : MonoBehaviour
 		_playerName.gameObject.SetActive(true);
 		TextMeshProUGUI playerName = _playerName
 			.GetComponentInChildren<VariableText>().GetComponent<TextMeshProUGUI>();
+		float scaleX = Screen.width / 1920f;
 
-		RectTransform rt = _playerName.GetComponent<RectTransform>();
-		rt.SetSizeWithCurrentAnchors
+		RectTransform rectTransform = _playerName.GetComponent<RectTransform>();
+		rectTransform.SetSizeWithCurrentAnchors
 		(
+
 			RectTransform.Axis.Horizontal,
-			player.Name.Length * 30
+			player.Name.Length * 30f * scaleX
 		);
 
 		playerName.text = player.Name;

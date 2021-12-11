@@ -11,9 +11,13 @@ public class Player : MonoBehaviour
 
 	private Vector3 _offset;
 
-	private void OnEnable()
+	private void Awake()
 	{
 		_offset = transform.localPosition;
+	}
+
+	private void OnEnable()
+	{
 		CurrentPoint = 0;
 	}
 }

@@ -24,6 +24,12 @@ public class StartGameMenu : MonoBehaviour
 		GetPlayersNames();
 		HideMainMenu();
 		ShowPlayers();
+		InitializePlayersMover();
+	}
+
+	private void InitializePlayersMover()
+	{
+		_playersMover.Initialization();
 	}
 
 	private void GetPlayersNames()
