@@ -172,15 +172,17 @@ public class PlayersMover : MonoBehaviour
 
 	public void FinishGame(bool isVictory)
 	{
-		StopCoroutine(_outlineCoroutine);
-		_outlineCoroutine = null;
-
 		foreach (Player player in _players)
 		{
 			player.gameObject.SetActive(false);
 			player.transform.position 
 				= _points[0].transform.position + player.Offset;
 		}
+
+		StopCoroutine(_outlineCoroutine);
+		_outlineCoroutine = null;
+		StopCoroutine(_movingCoroutine);
+		_movingCoroutine = null;
 
 		MainMenu mainMenu = Resources.FindObjectsOfTypeAll<MainMenu>()[0];
 

@@ -29,7 +29,7 @@ public class StartGameMenu : MonoBehaviour
 
 	private void InitializePlayersMover()
 	{
-		_playersMover.Initialization();
+		//_playersMover.Initialization();
 	}
 
 	private void GetPlayersNames()
@@ -62,6 +62,7 @@ public class StartGameMenu : MonoBehaviour
 			_players[i].gameObject.SetActive(isActive);
 		}
 
+		_playersMover.gameObject.SetActive(false);
 		_playersMover.gameObject.SetActive(true);
 	}
 
